@@ -1,0 +1,50 @@
+/* fonts */
+
+/* sawarabi-mincho-regular - japanese */
+@font-face {
+	font-family: 'Sawarabi Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Sawarabi Mincho'), local('SawarabiMincho-Regular'),
+	url('#{$fonts}sawarabi-mincho-v10-japanese-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('#{$fonts}sawarabi-mincho-v10-japanese-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* noto-sans-jp-regular - japanese */
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Noto Sans Japanese Regular'), local('NotoSansJapanese-Regular'),
+	url('../fonts/noto-sans-jp-v24-japanese-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/noto-sans-jp-v24-japanese-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-jp-700 - japanese */
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Noto Sans Japanese Bold'), local('NotoSansJapanese-Bold'),
+	url('#{$fonts}noto-sans-jp-v24-japanese-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('#{$fonts}noto-sans-jp-v24-japanese-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* sawarabi-gothic-regular - japanese */
+@font-face {
+	font-family: 'Sawarabi Gothic';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Sawarabi Gothic'), local('SawarabiGothic-Regular'),
+	url('#{$fonts}sawarabi-gothic-v8-japanese-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('#{$fonts}sawarabi-gothic-v8-japanese-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* noto-serif-regular - latin */
+@font-face {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Noto Serif'), local('NotoSerif'),
+	url('#{$fonts}noto-serif-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('#{$fonts}noto-serif-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

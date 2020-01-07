@@ -1,0 +1,582 @@
+.top {
+	background-size: cover;
+	background-position: 100%;
+	background-repeat: no-repeat;
+	height: calc(100vh - 70px);
+	position: relative;
+
+	.container {
+		height: 100%;
+	}
+
+	&__wrap {
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.primary-title {
+		position: relative;
+		top: -75px;
+		left: 15px;
+
+		&:after {
+			position: absolute;
+			content: '';
+			top: -190px;
+			left: 220px;
+			background-image: url("/images/heart__img_01.svg");
+			max-width: 119px;
+			width: 100%;
+			height: 102px;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: -100px;
+			left: 50%;
+			transform: translateX(50%);
+			background-image: url("/images/heart__img_02.svg");
+			max-width: 90px;
+			width: 100%;
+			height: 77px;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+	}
+
+	&__text {
+		font-size: 60px;
+		line-height: 72px;
+	}
+
+}
+
+.about {
+
+
+}
+
+.experience {
+	background: linear-gradient(180deg, #FFCFE2 0%, rgba(255, 233, 245, 0) 71.55%);
+	z-index: 10;
+
+	&__list {
+		width: 100%;
+		display: block;
+		@include media('<md') {
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include media('<sm') {
+			max-width: 345px;
+		}
+	}
+
+	&__item {
+		background: repeating-linear-gradient(-45deg,
+			transparent, transparent 10px, rgba(#FFCFE2, 0.3) 0, rgba(#FFCFE2, 0.3) 20px);
+		border: 5px solid $green;
+		padding: 17px 40px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: stretch;
+		align-items: start;
+		margin-top: 40px;
+
+		@include media('<md') {
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-top: 30px;
+		}
+
+		@include media('<sm') {
+			flex-direction: column;
+			align-items: center;
+			padding-left: 0;
+			padding-right: 0;
+			margin-top: 15px;
+		}
+	}
+
+	&__image-wrap {
+		display: block;
+		width: 100%;
+		max-width: 250px;
+		@include media('<md') {
+			max-width: 185px;
+		}
+		@include media('<sm') {
+			max-width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&__image-inner {
+		max-width: 240px;
+		width: 100%;
+		display: block;
+		position: relative;
+		box-shadow: 10px 10px 0 0 $persian;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		@include media('<md') {
+			max-width: 175px;
+		}
+		@include media('<sm') {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: 0;
+		padding-bottom: calc(260 / 240 * 100%);
+		position: relative;
+		z-index: 11;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			object-position: 50% 50%;
+		}
+	}
+
+	&__image-title {
+		@include secondaryFont;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 700;
+		color: #000;
+		@include media('<md') {
+			font-size: 20px;
+			line-height: 24px;
+		}
+
+		@include media('<sm') {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+	&__image-text-wrap {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: stretch;
+		@include media('<sm') {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+
+	&__image-text {
+		font-size: 18px;
+		line-height: 22px;
+		@include secondaryFont;
+		color: #000;
+		margin-top: 10px;
+
+		@include media('<md') {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		@include media('<sm') {
+			display: inline-block;
+			width: auto;
+		}
+
+
+	}
+
+	&__desc-wrap {
+		width: calc(100% - 240px);
+		padding-top: 5px;
+		padding-left: 40px;
+		@include media('<md') {
+			width: calc(100% - 120px);
+		}
+
+		@include media('<sm') {
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+
+	&__desc-header {
+		border-bottom: 3px solid #000;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding-bottom: 5px;
+
+		@include media('<sm') {
+			flex-direction: column;
+			align-items: center;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+	&__desc-header-salary {
+		font-size: 24px;
+		line-height: 28px;
+		@include secondaryFont;
+		color: $hotPink;
+		font-weight: 700;
+
+		@include media('<md') {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__desc-header-text {
+		font-size: 28px;
+		line-height: 32px;
+		@include secondaryFont;
+		color: $red;
+		font-weight: 700;
+		@include media('<md') {
+			font-size: 22px;
+			line-height: 26px;
+		}
+
+		@include media('<sm') {
+			font-size: 20px;
+			line-height: 24px;
+			margin-top: 10px;
+		}
+	}
+
+	&__desc-calendar {
+		background-color: $lemonade;
+		margin-top: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 7px 12px;
+
+		@include media('<md') {
+			padding: 4px 12px;
+		}
+		@include media('<sm') {
+			margin-top: 10px;
+		}
+	}
+
+	&__desc-calendar-icon {
+		max-width: 50px;
+		width: 100%;
+		display: block;
+		@include media('<md') {
+			max-width: 36px;
+		}
+		@include media('<sm') {
+			max-width: 26px;
+		}
+	}
+
+	&__desc-calendar-work {
+		font-size: 20px;
+		line-height: 24px;
+		@include secondaryFont;
+		font-weight: 700;
+		color: #000;
+		@include media('<md') {
+			font-size: 14px;
+			margin-left: 10px;
+		}
+
+		@include media('<sm') {
+			font-size: 12px;
+			line-height: 20px;
+		}
+	}
+
+	&__desc-calendar-number {
+		font-size: 64px;
+		line-height: 68px;
+		color: #000;
+		@include secondaryFont;
+		font-weight: 700;
+
+		@include media('<md') {
+			font-size: 48px;
+			line-height: 52px;
+		}
+
+		@include media('<sm') {
+			font-size: 30px;
+			line-height: 34px;
+		}
+	}
+
+	&__desc-calendar-text {
+		font-size: 24px;
+		line-height: 24px;
+		@include secondaryFont;
+		font-weight: 700;
+		color: #000;
+		@include media('<md') {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		@include media('<sm') {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&__desc-calendar-jobs {
+		font-size: 18px;
+		line-height: 24px;
+		color: #000;
+		@include secondaryFont;
+		text-align: right;
+		display: block;
+		margin-top: 5px;
+
+		@include media('<md') {
+			font-size: 14px;
+		}
+
+		@include media('<sm') {
+			font-size: 12px;
+			line-height: 16px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-top: 10px;
+		}
+	}
+
+	&__desc-price {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 3px solid #000;
+		margin-top: 15px;
+		@include media('<md') {
+			font-size: 18px;
+			line-height: 22px;
+			padding-bottom: 5px;
+		}
+
+		@include media('<sm') {
+			font-size: 14px;
+			line-height: 18px;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 20px;
+			padding-bottom: 10px;
+		}
+	}
+
+	&__desc-price-text {
+		background-color: $persian;
+		@include secondaryFont;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 700;
+		color: $white;
+		padding: 13px 17px;
+
+		@include media('<md') {
+			font-size: 18px;
+			line-height: 22px;
+			padding: 9px 12px;
+		}
+
+		@include media('<sm') {
+			font-size: 16px;
+		}
+	}
+
+	&__desc-price-sum {
+		font-size: 72px;
+		line-height: 80px;
+		@include thirdFont;
+		color: $hotPink;
+
+		@include media('<md') {
+			font-size: 48px;
+			line-height: 52px;
+		}
+
+		@include media('<sm') {
+			font-size: 36px;
+			line-height: 40px;
+		}
+	}
+
+	&__desc-price-currency {
+		font-size: 48px;
+
+		@include media('<md') {
+			font-size: 24px;
+		}
+
+		@include media('<sm') {
+			font-size: 18px;
+		}
+	}
+
+	&__desc-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include media('<sm') {
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-top: 20px;
+		}
+	}
+
+	&__desc-footer-text {
+		background-color: $green;
+		@include secondaryFont;
+		font-size: 18px;
+		line-height: 22px;
+		color: $white;
+		padding: 7px 15px;
+		@include media('<md') {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		@include media('<sm') {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+	&__desc-footer-sum {
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 68px;
+		@include secondaryFont;
+		color: #000;
+		@include media('<md') {
+			font-size: 48px;
+			line-height: 52px;
+		}
+
+		@include media('<sm') {
+			font-size: 36px;
+			line-height: 40px;
+		}
+	}
+
+	&__desc-footer-currency {
+		font-size: 36px;
+
+		@include media('<md') {
+			font-size: 24px;
+		}
+
+		@include media('<sm') {
+			font-size: 18px;
+		}
+	}
+
+
+}
+
+.fag {
+
+	&__image-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+	}
+
+	&__image {
+		display: block;
+		max-width: 208px;
+		width: 100%;
+	}
+
+&__list{
+
+}
+
+	&__question {
+		display: flex;
+		justify-content: stretch;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+&__answer{
+	display: flex;
+	justify-content: stretch;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+	&__question-circle {
+		font-size: 36px;
+		line-height: 30px;
+		color: #FFE9F5;
+		background-color: red;
+		border-radius: 50%;
+		width: 84px;
+		height: 84px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 12px;
+		@include primaryFont;
+
+		@include media('<sm'){
+			width: 40px;
+			height: 40px;
+			font-size: 20px;
+		}
+	}
+
+	&__answer-circle {
+		font-size: 36px;
+		line-height: 30px;
+		color: #FFE9F5;
+		background-color: red;
+		border-radius: 50%;
+		width: 84px;
+		height: 84px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 12px;
+		@include primaryFont;
+
+		@include media('<sm'){
+			width: 40px;
+			height: 40px;
+			font-size: 20px;
+		}
+	}
+	&__answer-text{
+		background-color: #FFE9F5;
+		border-radius: 15px;
+		padding: 15px;
+		font-size: 20px;
+		line-height: 32px;
+	}
+
+}

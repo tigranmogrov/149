@@ -1,0 +1,142 @@
+/* app */
+.primary-title {
+	color: $hotPink;
+	font-size: 48px;
+	line-height: 72px;
+	@include secondaryFont;
+	font-weight: 700;
+	text-shadow:
+		-0   -5px 1px #FFFFFF,
+		0   -5px 1px #FFFFFF,
+		-0    5px 1px #FFFFFF,
+		0    5px 1px #FFFFFF,
+		-5px -0   1px #FFFFFF,
+		5px -0   1px #FFFFFF,
+		-5px  0   1px #FFFFFF,
+		5px  0   1px #FFFFFF,
+		-1px -5px 1px #FFFFFF,
+		1px -5px 1px #FFFFFF,
+		-1px  5px 1px #FFFFFF,
+		1px  5px 1px #FFFFFF,
+		-5px -1px 1px #FFFFFF,
+		5px -1px 1px #FFFFFF,
+		-5px  1px 1px #FFFFFF,
+		5px  1px 1px #FFFFFF,
+		-2px -5px 1px #FFFFFF,
+		2px -5px 1px #FFFFFF,
+		-2px  5px 1px #FFFFFF,
+		2px  5px 1px #FFFFFF,
+		-5px -2px 1px #FFFFFF,
+		5px -2px 1px #FFFFFF,
+		-5px  2px 1px #FFFFFF,
+		5px  2px 1px #FFFFFF,
+		-3px -5px 1px #FFFFFF,
+		3px -5px 1px #FFFFFF,
+		-3px  5px 1px #FFFFFF,
+		3px  5px 1px #FFFFFF,
+		-5px -3px 1px #FFFFFF,
+		5px -3px 1px #FFFFFF,
+		-5px  3px 1px #FFFFFF,
+		5px  3px 1px #FFFFFF,
+		-4px -5px 1px #FFFFFF,
+		4px -5px 1px #FFFFFF,
+		-4px  5px 1px #FFFFFF,
+		4px  5px 1px #FFFFFF,
+		-5px -4px 1px #FFFFFF,
+		5px -4px 1px #FFFFFF,
+		-5px  4px 1px #FFFFFF,
+		5px  4px 1px #FFFFFF,
+		-5px -5px 1px #FFFFFF,
+		5px -5px 1px #FFFFFF,
+		-5px  5px 1px #FFFFFF,
+		5px  5px 1px #FFFFFF,
+		-5px -5px 1px #FFFFFF,
+		5px -5px 1px #FFFFFF,
+		-5px  5px 1px #FFFFFF,
+		5px  5px 1px #FFFFFF;
+}
+
+.secondary-title {
+	@include primaryFont;
+	font-size: 36px;
+	line-height: 40px;
+	color: $white;
+	background-color: $flamingo;
+	width: auto;
+	text-align: center;
+	min-width: 420px;
+	padding: 18px 17px;
+	display: inline-block;
+	border-radius: 40px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-weight: 400;
+
+	.after {
+		max-width: 120px;
+		width: 100%;
+		position: absolute;
+		top: -50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.before {
+		max-width: 120px;
+		width: 100%;
+		position: absolute;
+		bottom: -50px;
+		left: 50%;
+		transform: translateX(-50%) rotate(180deg);
+	}
+
+	@include media('<sm'){
+		font-size: 20px;
+		line-height: 24px;
+		min-width: 300px;
+		padding: 15px 13px;
+	}
+}
+
+.main-inner-offset {
+	padding-top: 130px;
+	padding-bottom: 100px;
+
+	@include media('<sm') {
+		padding-top: 80px;
+		padding-bottom: 65px;
+	}
+}
+
+.primary-top-offset {
+	margin-top: 100px;
+
+	@include media('<sm') {
+		margin-top: 80px;
+	}
+}
+
+.secondary-top-offset {
+	margin-top: 50px;
+
+	@include media('<sm') {
+		margin-top: 40px;
+	}
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left {
+	margin-left: initial;
+	margin-right: initial;
+}
+
+.right {
+	margin-left: auto;
+	margin-right: initial;
+}
+

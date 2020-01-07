@@ -1,0 +1,32 @@
+/* btn */
+
+.btn {
+	display: block;
+	width: 100%;
+	max-width: 194px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 18px 44px;
+	border-radius: 15px;
+	background-color: $flamingo;
+	border: none;
+	position: relative;
+	text-align: center;
+
+	font-size: 20px;
+	line-height: 24px;
+	color: $white;
+
+	// animate
+	transition-property: background, color;
+	transition-duration: $transition_dur;
+	transition-timing-function: $transition_tfn;
+
+	// defaults
+	cursor: pointer;
+	outline: none;
+
+	@at-root :root.hover &:hover{
+		background-color: $hotPink;
+	}
+}

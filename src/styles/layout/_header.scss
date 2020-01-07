@@ -1,0 +1,57 @@
+/* header */
+
+.header {
+	height: 70px;
+	background-color: $blush;
+
+	&__nav {
+		display: block;
+		height: 100%;
+		@include media('>=md') {
+			width: 1024px;
+		}
+	}
+
+	.active {
+		background-color: $flamingo;
+		color: $white;
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: stretch;
+		height: 100%;
+	}
+
+	&__nav-item {
+		flex-grow: 1;
+
+		&:last-child {
+			.header__nav-link {
+				border-right: none;
+			}
+		}
+	}
+
+	&__nav-link {
+		padding-left: 8px;
+		border-right: 1px solid $white;
+		height: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: center;
+		color: $flamingo;
+		font-size: 16px;
+		line-height: 20px;
+		transition: .3s;
+
+		@at-root :root.hover &:hover {
+			background-color: $flamingo;
+			color: $white;
+		}
+
+
+	}
+}

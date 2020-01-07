@@ -1,0 +1,34 @@
+/*
+	vars
+*/
+
+$fonts: '../fonts/';
+$images: '../images/';
+
+
+
+$breakpoints: (
+		xs: 375px,
+		sm: 768px,
+		md: 1024px,
+);
+
+// wrap
+$container-p: 15px;
+$container-width: 950px;
+
+// colors
+$white: #fff;
+$blush:#FFE9F5;
+$rose:#FF5BA6;
+$hotPink:#F40F7D;
+$flamingo:#FF7CAD;
+$lemonade:#FFB9D5;
+
+$green:#53B684;
+$persian:#FF5C5C;
+$red:#FF0000;
+
+// transitions
+$transition_dur: .5s;
+$transition_tfn: cubic-bezier(.165,.84,.44,1);

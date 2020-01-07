@@ -1,0 +1,40 @@
+/* mixins */
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after { clear: both; }
+}
+
+
+@mixin grid($cols, $offset) {
+	$Q: ( $cols - 1 ) / $cols;
+	$Off: $offset * $Q;
+	$width: 100% / $cols;
+	width: calc(#{$width} - #{$Off});
+}
+
+@mixin primaryFont {
+	font-family: 'Sawarabi Mincho', sans-serif;
+	font-style: normal;
+}
+
+@mixin secondaryFont {
+	font-family: 'Noto Sans JP', serif;
+	font-style: normal;
+}
+
+@mixin thirdFont {
+	font-family: 'Noto Serif', sans-serif;
+	font-style: normal;
+}
+
+@mixin  fourthFont{
+	font-family: 'Sawarabi Gothic', sans-serif;
+	font-style: normal;
+}
+
+
