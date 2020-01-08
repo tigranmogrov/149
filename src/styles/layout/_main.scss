@@ -2,7 +2,7 @@
 	background-size: cover;
 	background-position: 100%;
 	background-repeat: no-repeat;
-	height: calc(100vh - 70px);
+	height: 100vh;
 	position: relative;
 
 	.container {
@@ -57,7 +57,12 @@
 }
 
 .about {
-
+&__text{
+	@include media('<sm'){
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
 
 }
 
@@ -125,7 +130,7 @@
 		display: block;
 		position: relative;
 		box-shadow: 10px 10px 0 0 $persian;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		margin-right: 10px;
 		@include media('<md') {
 			max-width: 175px;
@@ -396,7 +401,7 @@
 		line-height: 28px;
 		font-weight: 700;
 		color: $white;
-		padding: 13px 17px;
+		padding: 13px 13px;
 
 		@include media('<md') {
 			font-size: 18px;
@@ -438,10 +443,10 @@
 		}
 	}
 
-	&__desc-footer {
+	&__desc-bottom {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: stretch;
 		@include media('<sm') {
 			padding-left: 10px;
 			padding-right: 10px;
@@ -449,7 +454,7 @@
 		}
 	}
 
-	&__desc-footer-text {
+	&__desc-bottom-text {
 		background-color: $green;
 		@include secondaryFont;
 		font-size: 18px;
@@ -467,12 +472,13 @@
 		}
 	}
 
-	&__desc-footer-sum {
+	&__desc-bottom-sum {
 		font-weight: 700;
 		font-size: 64px;
 		line-height: 68px;
 		@include secondaryFont;
 		color: #000;
+		margin-left: auto;
 		@include media('<md') {
 			font-size: 48px;
 			line-height: 52px;
@@ -484,7 +490,7 @@
 		}
 	}
 
-	&__desc-footer-currency {
+	&__desc-bottom-currency {
 		font-size: 36px;
 
 		@include media('<md') {
@@ -500,6 +506,7 @@
 }
 
 .fag {
+	background-color: #e5e5e5;
 
 	&__image-wrap {
 		display: flex;
@@ -513,30 +520,56 @@
 		width: 100%;
 	}
 
-&__list{
+	&__definition {
+		width: 100%;
+		display: block;
+	}
 
-}
-
-	&__question {
+	&__definition-inner {
 		display: flex;
 		justify-content: stretch;
-		align-items: center;
+		align-items: start;
 		margin-bottom: 20px;
-	}
-&__answer{
-	display: flex;
-	justify-content: stretch;
-	align-items: center;
-	margin-bottom: 20px;
-}
 
-	&__question-circle {
+		.question {
+			font-size: 28px;
+			line-height: 36px;
+			color: $green;
+			@include primaryFont;
+			margin-top: 25px;
+		}
+
+		.answer {
+			font-size: 20px;
+			line-height: 32px;
+			background-color: $blush;
+			border-radius: 15px;
+			padding: 15px;
+
+			@at-root :root.hover &:hover {
+				.answer__line {
+					background-size: 100% 100%;
+				}
+			}
+			&__line {
+				background-image: linear-gradient(to right, $lemonade 0, $lemonade 100%);
+				background-repeat: no-repeat;
+				background-size: 0 100%;
+				background-position: 0 1.3em;
+				transition: background .9s;
+			}
+
+		}
+	}
+
+
+	&__definition-circle {
 		font-size: 36px;
 		line-height: 30px;
-		color: #FFE9F5;
-		background-color: red;
+		color: $white;
 		border-radius: 50%;
-		width: 84px;
+		max-width: 84px;
+		width: 100%;
 		height: 84px;
 		display: flex;
 		justify-content: center;
@@ -544,39 +577,42 @@
 		margin-right: 12px;
 		@include primaryFont;
 
-		@include media('<sm'){
+		&.green {
+			background-color: $green;
+		}
+
+		&.pink {
+			background-color: $flamingo;
+		}
+
+		@include media('<sm') {
 			width: 40px;
 			height: 40px;
 			font-size: 20px;
 		}
 	}
 
-	&__answer-circle {
-		font-size: 36px;
-		line-height: 30px;
-		color: #FFE9F5;
-		background-color: red;
-		border-radius: 50%;
-		width: 84px;
-		height: 84px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-right: 12px;
-		@include primaryFont;
-
-		@include media('<sm'){
-			width: 40px;
-			height: 40px;
-			font-size: 20px;
-		}
-	}
-	&__answer-text{
-		background-color: #FFE9F5;
-		border-radius: 15px;
-		padding: 15px;
-		font-size: 20px;
-		line-height: 32px;
-	}
 
 }
+
+.info{
+	&__wrap{
+		background-color: red;
+		width: 468px;
+		height: 600px;
+		margin-left: auto;
+		border-radius: 40px;
+		padding:18px 10px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&__inner{
+		border: 5px solid $white;
+		width: 100%;
+		height: 100%;
+		border-radius: 40px;
+	}
+}
+
+
+

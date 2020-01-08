@@ -45,11 +45,29 @@
 		color: $flamingo;
 		font-size: 16px;
 		line-height: 20px;
-		transition: .3s;
+		transition: .5s;
+		z-index: 111;
+		position: relative;
+		overflow: hidden;
+		&:after{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			width: 0;
+			height: 100%;
+			background-color: $flamingo;
+			transition: .5s;
+			transition-delay: .2s;
+			z-index: -1;
+		}
 
 		@at-root :root.hover &:hover {
-			background-color: $flamingo;
+			//background-color: $flamingo;
 			color: $white;
+			&:after{
+				width: 100%;
+			}
 		}
 
 
