@@ -29,4 +29,9 @@
 	@at-root :root.hover &:hover{
 		background-color: $hotPink;
 	}
+
+	&.right {
+		margin-left: auto;
+		margin-right: initial;
+	}
 }

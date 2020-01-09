@@ -5,55 +5,54 @@
 	line-height: 72px;
 	@include secondaryFont;
 	font-weight: 700;
-	text-shadow:
-		-0   -5px 1px #FFFFFF,
-		0   -5px 1px #FFFFFF,
-		-0    5px 1px #FFFFFF,
-		0    5px 1px #FFFFFF,
-		-5px -0   1px #FFFFFF,
-		5px -0   1px #FFFFFF,
-		-5px  0   1px #FFFFFF,
-		5px  0   1px #FFFFFF,
-		-1px -5px 1px #FFFFFF,
-		1px -5px 1px #FFFFFF,
-		-1px  5px 1px #FFFFFF,
-		1px  5px 1px #FFFFFF,
-		-5px -1px 1px #FFFFFF,
-		5px -1px 1px #FFFFFF,
-		-5px  1px 1px #FFFFFF,
-		5px  1px 1px #FFFFFF,
-		-2px -5px 1px #FFFFFF,
-		2px -5px 1px #FFFFFF,
-		-2px  5px 1px #FFFFFF,
-		2px  5px 1px #FFFFFF,
-		-5px -2px 1px #FFFFFF,
-		5px -2px 1px #FFFFFF,
-		-5px  2px 1px #FFFFFF,
-		5px  2px 1px #FFFFFF,
-		-3px -5px 1px #FFFFFF,
-		3px -5px 1px #FFFFFF,
-		-3px  5px 1px #FFFFFF,
-		3px  5px 1px #FFFFFF,
-		-5px -3px 1px #FFFFFF,
-		5px -3px 1px #FFFFFF,
-		-5px  3px 1px #FFFFFF,
-		5px  3px 1px #FFFFFF,
-		-4px -5px 1px #FFFFFF,
-		4px -5px 1px #FFFFFF,
-		-4px  5px 1px #FFFFFF,
-		4px  5px 1px #FFFFFF,
-		-5px -4px 1px #FFFFFF,
-		5px -4px 1px #FFFFFF,
-		-5px  4px 1px #FFFFFF,
-		5px  4px 1px #FFFFFF,
-		-5px -5px 1px #FFFFFF,
-		5px -5px 1px #FFFFFF,
-		-5px  5px 1px #FFFFFF,
-		5px  5px 1px #FFFFFF,
-		-5px -5px 1px #FFFFFF,
-		5px -5px 1px #FFFFFF,
-		-5px  5px 1px #FFFFFF,
-		5px  5px 1px #FFFFFF;
+	text-shadow: -0   -5px 1px #FFFFFF,
+	0   -5px 1px #FFFFFF,
+	-0 5px 1px #FFFFFF,
+	0 5px 1px #FFFFFF,
+	-5px -0 1px #FFFFFF,
+	5px -0 1px #FFFFFF,
+	-5px 0 1px #FFFFFF,
+	5px 0 1px #FFFFFF,
+	-1px -5px 1px #FFFFFF,
+	1px -5px 1px #FFFFFF,
+	-1px 5px 1px #FFFFFF,
+	1px 5px 1px #FFFFFF,
+	-5px -1px 1px #FFFFFF,
+	5px -1px 1px #FFFFFF,
+	-5px 1px 1px #FFFFFF,
+	5px 1px 1px #FFFFFF,
+	-2px -5px 1px #FFFFFF,
+	2px -5px 1px #FFFFFF,
+	-2px 5px 1px #FFFFFF,
+	2px 5px 1px #FFFFFF,
+	-5px -2px 1px #FFFFFF,
+	5px -2px 1px #FFFFFF,
+	-5px 2px 1px #FFFFFF,
+	5px 2px 1px #FFFFFF,
+	-3px -5px 1px #FFFFFF,
+	3px -5px 1px #FFFFFF,
+	-3px 5px 1px #FFFFFF,
+	3px 5px 1px #FFFFFF,
+	-5px -3px 1px #FFFFFF,
+	5px -3px 1px #FFFFFF,
+	-5px 3px 1px #FFFFFF,
+	5px 3px 1px #FFFFFF,
+	-4px -5px 1px #FFFFFF,
+	4px -5px 1px #FFFFFF,
+	-4px 5px 1px #FFFFFF,
+	4px 5px 1px #FFFFFF,
+	-5px -4px 1px #FFFFFF,
+	5px -4px 1px #FFFFFF,
+	-5px 4px 1px #FFFFFF,
+	5px 4px 1px #FFFFFF,
+	-5px -5px 1px #FFFFFF,
+	5px -5px 1px #FFFFFF,
+	-5px 5px 1px #FFFFFF,
+	5px 5px 1px #FFFFFF,
+	-5px -5px 1px #FFFFFF,
+	5px -5px 1px #FFFFFF,
+	-5px 5px 1px #FFFFFF,
+	5px 5px 1px #FFFFFF;
 }
 
 .secondary-title {
@@ -91,7 +90,7 @@
 		transform: translateX(-50%) rotate(180deg);
 	}
 
-	@include media('<sm'){
+	@include media('<sm') {
 		font-size: 20px;
 		line-height: 24px;
 		min-width: 300px;
@@ -125,18 +124,8 @@
 	}
 }
 
-.center {
-	margin-left: auto;
-	margin-right: auto;
-}
 
-.left {
-	margin-left: initial;
-	margin-right: initial;
-}
 
-.right {
-	margin-left: auto;
-	margin-right: initial;
-}
+
+
 
