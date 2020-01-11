@@ -1,0 +1,142 @@
+.about {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 40px;
+		left: 0;
+		background-image: url("/images/about_flower.png");
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		max-width: 419px;
+		width: calc(419 / 1440 * 100vw);
+		height: 100%;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 30%;
+		right: 0;
+		background-image: url("/images/about_petals.png");
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		max-width: 245px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__image {
+		max-width: 250px;
+		width: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include media('>=md') {
+			position: absolute;
+			top: -40px;
+			right: -20px;
+		}
+
+		@include media('<md') {
+			margin-top: 20px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 36px;
+		@include primaryFont;
+		line-height: 40px;
+
+		&.text-shadow {
+			text-shadow: -0   -3px 0 #FCFCFC,
+			0   -3px 0 #FCFCFC,
+			-0 3px 0 #FCFCFC,
+			0 3px 0 #FCFCFC,
+			-3px -0 0 #FCFCFC,
+			3px -0 0 #FCFCFC,
+			-3px 0 0 #FCFCFC,
+			3px 0 0 #FCFCFC,
+			-1px -3px 0 #FCFCFC,
+			1px -3px 0 #FCFCFC,
+			-1px 3px 0 #FCFCFC,
+			1px 3px 0 #FCFCFC,
+			-3px -1px 0 #FCFCFC,
+			3px -1px 0 #FCFCFC,
+			-3px 1px 0 #FCFCFC,
+			3px 1px 0 #FCFCFC,
+			-2px -3px 0 #FCFCFC,
+			2px -3px 0 #FCFCFC,
+			-2px 3px 0 #FCFCFC,
+			2px 3px 0 #FCFCFC,
+			-3px -2px 0 #FCFCFC,
+			3px -2px 0 #FCFCFC,
+			-3px 2px 0 #FCFCFC,
+			3px 2px 0 #FCFCFC,
+			-3px -3px 0 #FCFCFC,
+			3px -3px 0 #FCFCFC,
+			-3px 3px 0 #FCFCFC,
+			3px 3px 0 #FCFCFC,
+			-3px -3px 0 #FCFCFC,
+			3px -3px 0 #FCFCFC,
+			-3px 3px 0 #FCFCFC,
+			3px 3px 0 #FCFCFC;
+		}
+
+		&.background-color {
+			text-align: center;
+			background-color: $rose;
+			border-radius: 330px;
+			padding: 11px 30px;
+			color: $white;
+		}
+
+		@include media('<md') {
+			font-size: 28px;
+			line-height: 36px;
+
+		}
+		@include media('<sm') {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+
+	&__text {
+		color: #000;
+
+		&.red {
+			font-size: 28px;
+			line-height: 36px;
+			@include primaryFont;
+			color: $persian;
+
+			@include media('<md') {
+				font-size: 20px;
+				line-height: 28px;
+			}
+			@include media('<sm') {
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+	}
+
+
+	&__inner {
+		padding: 52px 105px;
+		background: linear-gradient(180deg, #FF7CAA 0%, #F40F7D 100%);
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 30px;
+
+		@include media('<sm') {
+			padding: 17px 18px;
+		}
+	}
+
+}

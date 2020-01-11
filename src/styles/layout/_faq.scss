@@ -1,0 +1,22 @@
+.faq {
+	.container {
+		position: relative;
+	}
+
+	.top-fag__image {
+		@include media('>=md') {
+			position: absolute;
+			top: -30px;
+			&:nth-child(1) {
+				left: 0;
+			}
+			&:nth-child(2) {
+				right: 0;
+			}
+		}
+	}
+
+	&__text {
+		color: #000;
+	}
+}
