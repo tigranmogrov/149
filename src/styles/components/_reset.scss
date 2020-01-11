@@ -85,23 +85,61 @@ body {
 	font-size: 20px;
 	line-height: 32px;
 	color: $hotPink;
+
+	@include media('<md'){
+		font-size: 16px;
+		line-height: 24px;
+	}
+	@include media('<sm'){
+		font-size: 14px;
+		line-height: 18px;
+	}
 }
 
 /* br fix */
-@include media('>=992px') {
-	.mb {
-		display: none !important;
-	}
-	.pc {
+.mb {
+	@include media ('<sm') {
 		display: block !important;
+	}
+	@include media ('>=sm') {
+		display: none !important;
 	}
 }
 
-@include media('<=991px') {
-	.mb {
+.tb {
+	@include media ('>=sm', '<md') {
 		display: block !important;
 	}
-	.pc {
+	@include media ('<sm') {
+		display: none !important;
+	}
+	@include media ('>=md') {
+		display: none !important;
+	}
+}
+
+.pc {
+	@include media ('>=md') {
+		display: block !important;
+	}
+	@include media ('<md') {
+		display: none !important;
+	}
+}
+
+.mb-tb {
+	@include media ('<md') {
+		display: block !important;
+	}
+	@include media ('>=md') {
+		display: none !important;
+	}
+}
+.tb-pc {
+	@include media('>=sm') {
+		display: block !important;
+	}
+	@include media ('<sm') {
 		display: none !important;
 	}
 }
@@ -135,6 +173,7 @@ body {
 		box-sizing: border-box;
 	}
 }
+
 img{
 	display: block;
 	width: 100%;

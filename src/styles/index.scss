@@ -9,9 +9,13 @@
 @import "components/app";
 @import "components/buttons";
 @import "components/patterns";
+@import "~jquery-nice-select/css/nice-select";
 
 /*!* layout parts *!*/
 @import "layout/header";
 @import "layout/footer";
-@import "layout/main";
-
+@import "layout/home";
+@import "layout/voice";
+@import "layout/about";
+@import "layout/faq";
+@import "layout/contact";

@@ -65,6 +65,8 @@
   },
   "dependencies": {
     "include-media": "^1.4.9",
+    "jquery": "^3.4.1",
+    "jquery-nice-select": "^1.1.0",
     "normalize-scss": "^7.0.1",
     "rxjs": "^6.5.2"
   }

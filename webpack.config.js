@@ -315,7 +315,7 @@ module.exports = (env, argv) => {
 	/* devServer */
 	config.devServer = {
 		contentBase: path.resolve(__dirname, './src'),
-		//host: 'YOUR_LOCAL_IP',
+		// host: '192.168.1.198',
 		port: 8081,
 		stats: 'minimal',
 		overlay: true,

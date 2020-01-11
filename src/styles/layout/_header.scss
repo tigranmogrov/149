@@ -7,6 +7,8 @@
 	&__nav {
 		display: block;
 		height: 100%;
+		margin-left: 	auto;
+		margin-right: auto;
 		@include media('>=md') {
 			width: 1024px;
 		}
