@@ -1,0 +1,68 @@
+.contact {
+	background: linear-gradient(180deg, #FFCFE2 0%, rgba(255, 233, 245, 0) 71.55%);
+
+	&__list {
+		display: flex;
+		width: 100%;
+		justify-content: start;
+		flex-flow: row nowrap;
+		@include media('<md') {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__item {
+		background: linear-gradient(180deg, $persian 0%, #FF0074 100%);
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 330px;
+		width: calc(100% / 3);
+		display: block;
+		overflow: hidden;
+		&:not(:first-child) {
+			margin-left: 10px;
+		}
+
+		@include media('<md') {
+			width: 100%;
+			max-width: 380px;
+			&:not(:first-child) {
+				margin-left: 0;
+				margin-top: 20px;
+			}
+		}
+		@include media('<sm') {
+			width: 100%;
+			}
+	}
+
+	&__text-wrap{
+		max-width: 564px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__text {
+		color: #000;
+		@include media('<md'){
+			line-height: 32px;
+		}
+		@include media('<sm'){
+		font-size: 16px;
+			line-height: 24px;
+		}
+		&.margin{
+				margin-top: 20px;
+		}
+		&.padding {
+			padding: 30px 15px;
+			text-align: center;
+
+			@include media('<md'){
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+}
