@@ -128,6 +128,27 @@
 		transform: translateX(-50%) rotate(180deg);
 	}
 
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__icon {
+		display: inline-block;
+		max-width: 30px;
+		width: 100%;
+
+		@include media('<sm') {
+			max-width: 17px;
+		}
+	}
+
+	&__text {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
 	@include media('<sm') {
 		font-size: 20px;
 		line-height: 24px;
@@ -135,7 +156,6 @@
 		padding: 15px 13px;
 	}
 }
-
 
 .main-inner-offset {
 	padding-top: 80px;
@@ -191,7 +211,7 @@
 		top: 0;
 		left: 0;
 		background-image: url("#{$images}wave_icon_02.png");
-		background-size: contain;
+		background-size: cover;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		z-index: 2;
@@ -209,7 +229,7 @@
 		bottom: 0;
 		left: 0;
 		background-image: url("#{$images}wave_icon_01.png");
-		background-size: contain;
+		background-size: cover;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		z-index: 2;
@@ -225,7 +245,7 @@
 		top: 80px;
 		right: 0;
 		display: block;
-		background-image: url("/images/experience_flower_02.png");
+		background-image: url("#{$images}experience_flower_02.png");
 		background-position: 0 0;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -244,7 +264,7 @@
 		content: '';
 		top: 0;
 		left: 0;
-		background-image: url("/images/experience_flower_01.png");
+		background-image: url("#{$images}experience_flower_01.png");
 		background-position: 0 0;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -263,7 +283,7 @@
 		content: '';
 		top: 10%;
 		left: 0;
-		background-image: url("/images/top_faq_flower_01.png");
+		background-image: url("#{$images}top_faq_flower_01.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -282,7 +302,7 @@
 		content: '';
 		top: 8%;
 		right: 0;
-		background-image: url("/images/top_faq_flower_02.png");
+		background-image: url("#{$images}top_faq_flower_02.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -293,7 +313,7 @@
 	}
 }
 
-.info-flower_01 {
+.top-info-flower_01 {
 	position: relative;
 
 	&:before {
@@ -301,7 +321,7 @@
 		content: '';
 		top: 0;
 		left: 0;
-		background-image: url("/images/info_flower_01.png");
+		background-image: url("#{$images}info_flower_01.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -312,7 +332,7 @@
 	}
 }
 
-.info-flower_02 {
+.top-info-flower_02 {
 	position: relative;
 
 	&:after {
@@ -320,7 +340,7 @@
 		content: '';
 		top: 20px;
 		right: 0;
-		background-image: url("/images/info_flower_02.png");
+		background-image: url("#{$images}info_flower_02.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -339,7 +359,7 @@
 		content: '';
 		top: 60px;
 		left: 0;
-		background-image: url("/images/top_contact_flower_01.png");
+		background-image: url("#{$images}top_contact_flower_01.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -358,7 +378,7 @@
 		content: '';
 		top: 100px;
 		right: 0;
-		background-image: url("/images/top_contact_flower_02.png");
+		background-image: url("#{$images}top_contact_flower_02.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -377,7 +397,7 @@
 		content: '';
 		top: 20px;
 		left: 0;
-		background-image: url("/images/voice_flower_01.png");
+		background-image: url("#{$images}voice_flower_01.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -396,7 +416,7 @@
 		content: '';
 		top: 50%;
 		right: 0;
-		background-image: url("/images/voice_flower_02.png");
+		background-image: url("#{$images}voice_flower_02.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -415,7 +435,7 @@
 		content: '';
 		bottom: 240px;
 		left: 0;
-		background-image: url("/images/faq_flower_01.png");
+		background-image: url("#{$images}faq_flower_01.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -434,7 +454,7 @@
 		content: '';
 		bottom: 30px;
 		right: 0;
-		background-image: url("/images/faq_flower_02.png");
+		background-image: url("#{$images}faq_flower_02.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -453,7 +473,7 @@
 		content: '';
 		top: 0;
 		left: 0;
-		background-image: url("/images/contact_flower_01.png");
+		background-image: url("#{$images}contact_flower_01.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
@@ -472,13 +492,51 @@
 		content: '';
 		bottom: 40px;
 		right: 0;
-		background-image: url("/images/contact_flower_02.png");
+		background-image: url("#{$images}contact_flower_02.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: contain;
 		max-width: 502px;
 		width: calc(502 / 1440 * 100vw);
-		height:calc(645 / 1440 * 100vw);
+		height: calc(645 / 1440 * 100vw);
+		z-index: 3;
+	}
+}
+
+.info-flower_01 {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		background-image: url("#{$images}info_flower_03.png");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+		max-width: 413px;
+		width: calc(413 / 1440 * 100vw);
+		height: calc(1308 / 1440 * 100vw);
+		z-index: 3;
+	}
+}
+
+.info-flower_02 {
+	position: relative;
+
+	&:after {
+		position: absolute;
+		content: '';
+		top: 30%;
+		right: 0;
+		background-image: url("#{$images}info_flower_04.png");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+		max-width: 427px;
+		width: calc(427 / 1440 * 100vw);
+		height: calc(1288 / 1440 * 100vw);
 		z-index: 3;
 	}
 }
@@ -510,6 +568,7 @@
 	&__inner {
 		display: flex;
 		justify-content: stretch;
+		flex-flow: row nowrap;
 		align-items: start;
 		cursor: pointer;
 
@@ -536,6 +595,20 @@
 		}
 
 		&.answer {
+			display: none;
+			margin-top: 20px;
+
+			.answer__inner {
+				display: flex;
+				justify-content: start;
+				flex-flow: row nowrap;
+			}
+
+			@at-root :root.hover &:hover {
+				.answer__line {
+					background-size: 100% 1px;
+				}
+			}
 			.accordion__text {
 				font-size: 20px;
 				line-height: 32px;
@@ -547,17 +620,13 @@
 					font-size: 14px;
 					line-height: 18px;
 				}
-				@at-root :root.hover &:hover {
-					.answer__line {
-						background-size: 100% 2px;
-					}
-				}
+
 			}
 
 			.answer__line {
-				background-image: linear-gradient(180deg, black 2px, transparent calc(100% - 2px));
+				background-image: linear-gradient(180deg, $persian 1px, transparent calc(100% - 1px));
 				background-repeat: no-repeat;
-				background-size: 0 2px;
+				background-size: 0 1px;
 				background-position: 0 100%;
 				transition: background .9s;
 				display: inline;
@@ -597,6 +666,8 @@
 			margin-right: 5px;
 		}
 	}
+
+
 }
 
 .form {
@@ -609,12 +680,22 @@
 	&__group {
 		margin-bottom: 20px;
 
-
 		.label__desc {
 			font-size: 14px;
 			line-height: 18px;
 			color: $hotPink;
 			margin-top: 10px;
+		}
+	}
+
+	&__group-inner {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+		flex-flow: row nowrap;
+		@include media("<sm") {
+			flex-direction: column;
+			align-items: start;
 		}
 
 		.current {
@@ -668,17 +749,9 @@
 
 		.option {
 			color: $hotPink;
-			width: 220px;
 		}
 
-	}
 
-	&__group-inner {
-		display: flex;
-		@include media("<sm") {
-			flex-direction: column;
-			align-items: start;
-		}
 	}
 }
 
@@ -697,6 +770,7 @@
 
 .input,
 .textarea {
+
 	&::placeholder {
 		@include fourthFont;
 		font-style: 20px;
@@ -704,6 +778,7 @@
 		color: #E9CCD6;
 	}
 }
+
 
 .label {
 	width: 100%;
@@ -729,7 +804,7 @@
 		margin-left: 10px;
 		color: $red;
 
-		@include media('<xs'){
+		@include media('<xs') {
 			padding-left: 15px;
 			padding-right: 15px;
 		}
@@ -775,13 +850,21 @@
 	margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
-
 }
 
 .label-radio {
 	margin: 9px auto 0;
 	display: block;
 	width: 100%;
+	position: relative;
+
+	input {
+		position: absolute;
+		top: 9px;
+		left: 3px;
+		height: 0;
+		width: 0;
+	}
 }
 
 .radio {
@@ -836,3 +919,46 @@ input[type="radio"]:checked + .radio {
 	&::placeholder {
 	}
 }
+
+.arrow-top__wrap {
+	opacity: 0;
+	position: fixed;
+	width: 59px;
+	height: 46px;
+	border-radius: 5px;
+	bottom: 20px;
+	right: 15px;
+	background-color: $lemonade;
+	transition: .6s;
+	&.show {
+		opacity: 1;
+		transition: .6s;
+	}
+	@at-root :root.hover &:hover {
+		path {
+			fill: #FF0074;
+		}
+	}
+}
+
+
+.arrow {
+	display: block;
+	max-width: 24px;
+	width: 100%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: auto;
+	margin-right: auto;
+path{
+	transition: .3s;
+}
+
+
+}
+
+
+
+
+

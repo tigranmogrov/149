@@ -1,25 +1,26 @@
 .voice {
 
-	&__wrap{
+	&__wrap {
 		position: relative;
 	}
-		&__image {
-			max-width: 260px;
-			width: 100%;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
 
-			@include media('>=md') {
-				position: absolute;
-				top: -60px;
-				right: -10%;
-			}
+	&__image {
+		max-width: 260px;
+		width: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 
-			@include media('<md') {
-				margin-top: 20px;
-			}
+		@include media('>=md') {
+			position: absolute;
+			top: -60px;
+			right: -10%;
 		}
+
+		@include media('<md') {
+			margin-top: 20px;
+		}
+	}
 
 
 }
