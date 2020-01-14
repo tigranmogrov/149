@@ -2,8 +2,11 @@
 .primary-title {
 	color: $hotPink;
 	font-size: 48px;
+	margin-top: 190px;
 	line-height: 72px;
 	@include secondaryFont;
+	position: relative;
+	display: inline-block;
 	font-weight: 700;
 	text-shadow: -0   -5px 1px #FFFFFF,
 	0   -5px 1px #FFFFFF,
@@ -53,19 +56,16 @@
 	5px -5px 1px #FFFFFF,
 	-5px 5px 1px #FFFFFF,
 	5px 5px 1px #FFFFFF;
-	position: relative;
-	top: -40px;
-	left: 35px;
+
 	@include media('<md') {
 		font-size: 40px;
 		line-height: 60px;
-		left: 0;
 	}
 
 	@include media('<sm') {
 		font-size: 20px;
 		line-height: 34px;
-		top: 30px;
+		margin-top: 20px;
 	}
 
 	&:after {
@@ -73,7 +73,7 @@
 		content: '';
 		top: -190px;
 		left: 190px;
-		background-image: url("/images/heart__img_01.svg");
+		background-image: url("#{$images}heart__img_01.svg");
 		max-width: 217px;
 		width: 100%;
 		height: 152px;
@@ -83,6 +83,7 @@
 		z-index: -1;
 		@include media('<md') {
 			max-width: 162px;
+			top: -150px;
 		}
 		@include media('<sm') {
 			top: -30px;
@@ -99,7 +100,8 @@
 	background-color: $flamingo;
 	width: auto;
 	text-align: center;
-	min-width: 420px;
+	min-width: 220px;
+	max-width: 520px;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	padding: 18px 17px;
@@ -137,7 +139,19 @@
 	&__icon {
 		display: inline-block;
 		max-width: 30px;
+		height: 27px;
 		width: 100%;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			path {
+				fill: #fff;
+			}
+		}
+
 
 		@include media('<sm') {
 			max-width: 17px;
@@ -238,26 +252,27 @@
 
 .experience-flower_01 {
 	position: relative;
+	overflow: hidden;
 
 	&:before {
 		position: absolute;
 		content: '';
-		top: 80px;
+		top: calc(60 / 1440 * 100%);
 		right: 0;
-		display: block;
 		background-image: url("#{$images}experience_flower_02.png");
-		background-position: 0 0;
+		background-position: 50% 50%;
 		background-size: contain;
 		background-repeat: no-repeat;
 		max-width: 413px;
 		width: calc(413 / 1440 * 100vw);
 		height: calc(1496 / 1440 * 100vw);
-		z-index: 1;
+		z-index: 3;
 	}
 }
 
 .experience-flower_02 {
 	position: relative;
+	overflow: hidden;
 
 	&:after {
 		position: absolute;
@@ -277,11 +292,12 @@
 
 .top-faq-flower_01 {
 	position: relative;
+	overflow: hidden;
 
 	&:before {
 		position: absolute;
 		content: '';
-		top: 10%;
+		top: calc(214 / 1440 * 100%);
 		left: 0;
 		background-image: url("#{$images}top_faq_flower_01.png");
 		background-repeat: no-repeat;
@@ -289,18 +305,19 @@
 		background-size: contain;
 		max-width: 312px;
 		width: calc(312 / 1440 * 100vw);
-		height: 100%;
+		height: calc(1159 / 1440 * 100vw);
 		z-index: 3;
 	}
 }
 
 .top-faq-flower_02 {
 	position: relative;
+	overflow: hidden;
 
 	&:after {
 		position: absolute;
 		content: '';
-		top: 8%;
+		top: calc(273 / 1440 * 100%);
 		right: 0;
 		background-image: url("#{$images}top_faq_flower_02.png");
 		background-repeat: no-repeat;
@@ -308,13 +325,14 @@
 		background-size: contain;
 		max-width: 431px;
 		width: calc(431 / 1440 * 100vw);
-		height: 100%;
+		height: calc(1217 / 1440 * 100vw);
 		z-index: 3;
 	}
 }
 
 .top-info-flower_01 {
 	position: relative;
+	overflow: hidden;
 
 	&:before {
 		position: absolute;
@@ -323,7 +341,7 @@
 		left: 0;
 		background-image: url("#{$images}info_flower_01.png");
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		background-position: 0 0;
 		background-size: contain;
 		max-width: 459px;
 		width: calc(459 / 1440 * 100vw);
@@ -334,15 +352,16 @@
 
 .top-info-flower_02 {
 	position: relative;
+	overflow: hidden;
 
 	&:after {
 		position: absolute;
 		content: '';
-		top: 20px;
+		top: calc(14 / 1440 * 100%);
 		right: 0;
 		background-image: url("#{$images}info_flower_02.png");
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		background-position: 0 0;
 		background-size: contain;
 		max-width: 261px;
 		width: calc(261 / 1440 * 100vw);
@@ -353,15 +372,16 @@
 
 .top-contact-flower_01 {
 	position: relative;
+	overflow: hidden;
 
 	&:before {
 		position: absolute;
 		content: '';
-		top: 60px;
+		top: calc(58 / 1440 * 100%);
 		left: 0;
 		background-image: url("#{$images}top_contact_flower_01.png");
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		background-position: 0 0;
 		background-size: contain;
 		max-width: 392px;
 		width: calc(392 / 1440 * 100vw);
@@ -372,15 +392,16 @@
 
 .top-contact-flower_02 {
 	position: relative;
+	overflow: hidden;
 
 	&:after {
 		position: absolute;
 		content: '';
-		top: 100px;
+		top: calc(107 / 1440 * 100%);
 		right: 0;
 		background-image: url("#{$images}top_contact_flower_02.png");
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		background-position: 0 0;
 		background-size: contain;
 		max-width: 261px;
 		width: calc(261 / 1440 * 100vw);
@@ -391,15 +412,16 @@
 
 .voice-flower_01 {
 	position: relative;
+	overflow: hidden;
 
 	&:before {
 		position: absolute;
 		content: '';
-		top: 20px;
+		top: 0;
 		left: 0;
 		background-image: url("#{$images}voice_flower_01.png");
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		background-position: 0 0;
 		background-size: contain;
 		max-width: 414px;
 		width: calc(414 / 1440 * 100vw);
@@ -410,15 +432,16 @@
 
 .voice-flower_02 {
 	position: relative;
+	overflow: hidden;
 
 	&:after {
 		position: absolute;
 		content: '';
-		top: 50%;
+		top: calc(760 / 1440 * 100%);
 		right: 0;
 		background-image: url("#{$images}voice_flower_02.png");
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		background-position: 0 0;
 		background-size: contain;
 		max-width: 405px;
 		width: calc(405 / 1440 * 100vw);
@@ -429,11 +452,11 @@
 
 .faq-flower_01 {
 	position: relative;
-
+	overflow: hidden;
 	&:before {
 		position: absolute;
 		content: '';
-		bottom: 240px;
+		bottom: calc(240 / 1440 * 100%);
 		left: 0;
 		background-image: url("#{$images}faq_flower_01.png");
 		background-repeat: no-repeat;
@@ -448,15 +471,15 @@
 
 .faq-flower_02 {
 	position: relative;
-
+	overflow: hidden;
 	&:after {
 		position: absolute;
 		content: '';
-		bottom: 30px;
+		top: calc(380 / 1440 * 100%);
 		right: 0;
 		background-image: url("#{$images}faq_flower_02.png");
 		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		background-position: 0 0;
 		background-size: contain;
 		max-width: 371px;
 		width: calc(371 / 1440 * 100vw);
@@ -561,18 +584,30 @@
 	background: linear-gradient(180deg, #FFCFE2 0%, rgba(255, 233, 245, 0) 71.55%);
 }
 
+#accordion {
+	.accordion__wrap.question {
+		cursor: pointer;
+		@at-root :root.hover &:hover {
+			.accordion__text-inner {
+				background-size: 100% 1px;
+			}
+		}
+	}
+}
+
 .accordion {
 	width: 100%;
 	display: block;
 
-	&__inner {
-		display: flex;
-		justify-content: stretch;
-		flex-flow: row nowrap;
-		align-items: start;
-		cursor: pointer;
+	&__wrap {
+		display: block;
+		width: 100%;
 
 		&.question {
+
+			.accordion__circle {
+				background-color: $green;
+			}
 
 			.accordion__text {
 				font-size: 28px;
@@ -590,25 +625,27 @@
 					line-height: 18px;
 					font-size: 14px;
 				}
+
+			}
+
+			.accordion__text-inner {
+				background-image: linear-gradient(180deg, $green 1px, transparent calc(100% - 1px));
+				background-repeat: no-repeat;
+				background-size: 0 1px;
+				background-position: 0 100%;
+				transition: background .9s;
+				display: inline;
 			}
 
 		}
 
 		&.answer {
-			display: none;
 			margin-top: 20px;
 
-			.answer__inner {
-				display: flex;
-				justify-content: start;
-				flex-flow: row nowrap;
+			.accordion__circle {
+				background-color: $flamingo;
 			}
 
-			@at-root :root.hover &:hover {
-				.answer__line {
-					background-size: 100% 1px;
-				}
-			}
 			.accordion__text {
 				font-size: 20px;
 				line-height: 32px;
@@ -622,17 +659,14 @@
 				}
 
 			}
-
-			.answer__line {
-				background-image: linear-gradient(180deg, $persian 1px, transparent calc(100% - 1px));
-				background-repeat: no-repeat;
-				background-size: 0 1px;
-				background-position: 0 100%;
-				transition: background .9s;
-				display: inline;
-			}
-
 		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: stretch;
+		flex-flow: row nowrap;
+		align-items: start;
 	}
 
 	&__circle {
@@ -648,14 +682,6 @@
 		align-items: center;
 		margin-right: 12px;
 		@include primaryFont;
-
-		&.green {
-			background-color: $green;
-		}
-
-		&.pink {
-			background-color: $flamingo;
-		}
 
 		@include media('<sm') {
 			width: 40px;
@@ -690,90 +716,97 @@
 
 	&__group-inner {
 		display: flex;
-		justify-content: start;
-		align-items: start;
 		flex-flow: row nowrap;
+		align-items: stretch;
+		justify-content: flex-start;
 		@include media("<sm") {
 			flex-direction: column;
 			align-items: start;
 		}
 
+	}
+}
+
+.select {
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+	flex: 1 0 auto;
+
+	@include media('<sm') {
+		padding-left: 0;
+		margin-top: 10px;
+	}
+
+	.nice-select {
+		max-width: 220px;
+		width: 220px;
+		flex: 1 0 auto;
+		border-radius: 10px;
+		font-size: 20px;
+		padding: 10px 40px 10px 20px;
+		height: 60px;
+		border-color: #FF0074;
+		position: relative;
+
+		&.open {
+
+			&:after {
+				transform: rotate(-180deg);
+			}
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			border: 11px solid transparent;
+			border-top: 18px solid #E9CCD6;
+			transform: rotate(0) translateY(-10%);
+			height: 5px;
+			width: 5px;
+			transform-origin: 50% 25%;
+			pointer-events: none;
+			transition: all 0.2s ease-in-out;
+		}
+
+		&:hover, &:focus {
+			border-color: #FF0074;
+		}
+
 		.current {
 			color: #E9CCD6;
 		}
+	}
 
-		.nice-select {
-			max-width: 220px;
-			border-radius: 10px;
-			font-size: 20px;
-			line-height: 24px;
-			padding: 15px 20px;
-			width: 100%;
-			min-height: 60px;
-			border-color: #FF0074;
-			margin-left: 15px;
-			position: relative;
-
-			&.open {
-
-				&:after {
-					transform: rotate(-180deg);
-				}
-			}
-
-			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				right: 12px;
-				top: 50%;
-				border: 11px solid transparent;
-				border-top: 18px solid #E9CCD6;
-				transform: rotate(0) translateY(-10%);
-				height: 5px;
-				width: 5px;
-				transform-origin: 50% 25%;
-				pointer-events: none;
-				transition: all 0.2s ease-in-out;
-			}
-
-			&:hover, &:focus {
-				border-color: #FF0074;
-			}
-
-			@include media('<sm') {
-				margin-left: 0;
-				margin-top: 10px;
-			}
-		}
-
-		.option {
-			color: $hotPink;
-		}
-
-
+	.list {
+		width: 100%;
+		border: 1px solid #FF0074;
 	}
 }
 
 .input {
 	display: block;
-	padding: 17px 17px;
+	padding: 0 17px;
 	width: 100%;
 	border: 1px solid #FF0074;
 	border-radius: 10px;
 	min-height: 60px;
-	@include fourthFont;
-	font-style: 20px;
-	line-height: 24px;
-	color: $rose;
 }
 
 .input,
 .textarea {
+	-webkit-appearance: none;
+	color: $rose;
+	@include fourthFont;
+	font-size: 20px;
+	line-height: 24px;
 
 	&::placeholder {
 		@include fourthFont;
-		font-style: 20px;
+		font-size: 20px;
 		line-height: 24px;
 		color: #E9CCD6;
 	}
@@ -858,6 +891,7 @@
 	width: 100%;
 	position: relative;
 	cursor: pointer;
+
 	input {
 		position: absolute;
 		top: 9px;
@@ -920,42 +954,52 @@ input[type="radio"]:checked + .radio {
 	}
 }
 
-.arrow-top__wrap {
+.scroll-to-top {
 	opacity: 0;
+	visibility: hidden;
+	transition: .4s;
 	position: fixed;
+	z-index: 99;
 	width: 59px;
 	height: 46px;
 	border-radius: 5px;
 	bottom: 20px;
 	right: 15px;
 	background-color: $lemonade;
-	transition: .6s;
-	&.show {
-		opacity: 1;
-		transition: .6s;
-	}
+	border: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
 	@at-root :root.hover &:hover {
 		path {
 			fill: #FF0074;
 		}
 	}
-}
+
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.absolute {
+		position: absolute;
+		top: -60px;
+		right: 15px;
+	}
+
+	&__icon {
+		display: block;
+		max-width: 24px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+
+		path {
+			transition: .3s;
+		}
 
 
-.arrow {
-	display: block;
-	max-width: 24px;
-	width: 100%;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-	margin-left: auto;
-	margin-right: auto;
-path{
-	transition: .3s;
-}
-
-
+	}
 }
 
 

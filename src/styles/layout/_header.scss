@@ -3,14 +3,14 @@
 .header {
 	height: 70px;
 	background-color: $blush;
+	@include media('<md') {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 111;
+	}
 
-@include media('<md'){
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 111;
-}
 	&__nav {
 		display: block;
 		height: 100%;
@@ -27,7 +27,6 @@
 			left: 100%;
 			background-color: $blush;
 			padding-top: 70px;
-			transition: .5s;
 			z-index: 11;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
@@ -60,7 +59,7 @@
 
 	&__nav-item {
 		flex-grow: 1;
-
+		display: flex;
 		&:last-child {
 			.header__nav-link {
 				border-right: none;
@@ -70,20 +69,23 @@
 	}
 
 	&__nav-link {
-		padding-left: 8px;
 		border-right: 1px solid $white;
-		height: 70px;
 		display: flex;
 		flex-flow: row nowrap;
 		align-items: center;
 		justify-content: center;
-		color: $flamingo;
-		font-size: 16px;
-		line-height: 20px;
-		transition: .5s;
-		z-index: 111;
+		width: 100%;
 		position: relative;
 		overflow: hidden;
+		z-index: 3;
+		@at-root :root.hover &:hover {
+			.header__nav-link-inner {
+				color: $white;
+			}
+			&:after {
+				transform: translateX(0);
+			}
+		}
 
 		@include media('<md') {
 			padding-top: 25px;
@@ -98,24 +100,28 @@
 
 		&:after {
 			position: absolute;
+			display: block;
 			content: '';
-			left: 0;
 			top: 0;
-			width: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
 			height: 100%;
+			transform: translateX(-100%);
 			background-color: $flamingo;
-			transition: .5s;
-			transition-delay: .2s;
-			z-index: -1;
+			transition: transform .5s;
+			z-index: 1;
 		}
+	}
 
-		@at-root :root.hover &:hover {
-			color: $white;
-			&:after {
-				width: 100%;
-			}
-		}
-
+	&__nav-link-inner {
+		color: $flamingo;
+		font-size: 16px;
+		line-height: 20px;
+		transition: color .5s;
+		z-index: 2;
+		position: relative;
 	}
 
 	&.menu-open {
@@ -165,7 +171,7 @@
 		stroke-dashoffset: -98px;
 	}
 
-	.ham1.active .middle{
+	.ham1.active .middle {
 		stroke: #F40F7D;
 	}
 

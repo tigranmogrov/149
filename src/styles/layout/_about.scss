@@ -1,5 +1,6 @@
 .about {
 	position: relative;
+	overflow: hidden;
 	@include media('<md') {
 		margin-top: 70px;
 	}
@@ -7,7 +8,7 @@
 	&:after {
 		content: '';
 		position: absolute;
-		top: 40px;
+		top: calc(40 / 1440 * 100%);
 		left: 0;
 		background-image: url("/images/about_flower.png");
 		background-position: 0 0;
@@ -15,21 +16,21 @@
 		background-size: contain;
 		max-width: 419px;
 		width: calc(419 / 1440 * 100vw);
-		height: 100%;
+		height: calc(1100 / 1440 * 100vw);
 	}
 
 	&:before {
 		content: '';
 		position: absolute;
-		top: 30%;
+		top: calc(417 / 1440 * 100%);
 		right: 0;
 		background-image: url("/images/about_petals.png");
-		background-position: 0 0;
+		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: contain;
 		max-width: 245px;
-		width: 100%;
-		height: 100%;
+		width: calc(245 / 1440 * 100vw);
+		height: calc(255 / 1440 * 100vw);
 	}
 
 	&__image {
