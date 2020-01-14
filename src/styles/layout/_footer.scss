@@ -27,6 +27,7 @@
 			margin-right: auto;
 		}
 
+
 		@include media('<sm') {
 			column-count: 2;
 			margin-left: 30px;

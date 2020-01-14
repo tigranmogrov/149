@@ -1,5 +1,8 @@
 .about {
 	position: relative;
+	@include media('<md') {
+		margin-top: 70px;
+	}
 
 	&:after {
 		content: '';

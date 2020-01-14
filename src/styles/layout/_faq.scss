@@ -1,4 +1,8 @@
 .faq {
+	@include media('<md') {
+		margin-top: 70px;
+	}
+
 	.container {
 		position: relative;
 	}
