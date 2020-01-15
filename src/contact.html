@@ -20,7 +20,11 @@
 	<title>Home</title>
 	<style>
 		[data-active="05"] .header__nav-link {
-			background-color: #FF7CAD;
+			background: linear-gradient(to left, #FF7CAD 0%, #FFB6C2 calc(100% * 1));
+		}
+
+		[data-active="05"] .header__nav-link::after {
+			content: none;
 		}
 
 		[data-active="05"] .header__nav-link-inner {
@@ -28,6 +32,7 @@
 		}
 	</style>
 </head>
+
 <body>
 <div class="wrapper" id="wrapper">
 	<%= _.template(require('./parts/header.html'))() %>
@@ -87,23 +92,23 @@
 
 				</ul>
 
-				<div class="container"><div class="contact__text-wrap primary-top-offset">
+				<div class="container">
+					<div class="contact__text-wrap primary-top-offset">
 
-					<p class="contact__text">当求人では</p>
+						<p class="contact__text">当求人では</p>
 
-					<p class="contact__text margin">未経験から出稼ぎ、<br class="mb">移籍の方までどなたでも安心して</p>
+						<p class="contact__text margin">未経験から出稼ぎ、<br class="mb">移籍の方までどなたでも安心して</p>
 
-					<p class="contact__text margin">働けるお仕事環境の<br class="mb">
-						ご提案をしております。</p>
-					<p class="contact__text margin">新店舗のこと、気になる部分、<br class="mb">
-						小さなこと、<br class="pc"><br class="tb">どんなことでも<br class="mb">
-						構いませんので</p>
-					<p class="contact__text margin">お気軽に<br class="mb">
-						お問い合わせくださいねヾ(^^ )</p>
-				</div>
+						<p class="contact__text margin">働けるお仕事環境の<br class="mb">
+							ご提案をしております。</p>
+						<p class="contact__text margin">新店舗のこと、気になる部分、<br class="mb">
+							小さなこと、<br class="pc"><br class="tb">どんなことでも<br class="mb">
+							構いませんので</p>
+						<p class="contact__text margin">お気軽に<br class="mb">
+							お問い合わせくださいねヾ(^^ )</p>
+					</div>
 
 					<form class="form primary-top-offset">
-
 						<div class="form__group">
 							<label class="label" for="name">
 								お名前（仮名でもOK）
@@ -123,22 +128,26 @@
 
 							<div class="form__group-inner">
 								<input class="input" type="email" id="E-mail">
-								<label style="display: none">
-									<select>
-										<option value="@docomo.ne.jp">@docomo.ne.jp</option>
-										<option value="@domo.ne.jp">@domo.ne.jp</option>
-										<option value="@doremo.ne.jp">@doremo.ne.jp</option>
-									</select>
-								</label>
 
-								<div class="nice-select" tabindex="0">
-									<span class="current">@docomo.ne.jp</span>
-									<ul class="list">
-										<li data-value="@docomo.ne.jp" class="option selected focus">@docomo.ne.jp</li>
-										<li data-value="@domo.ne.jp" class="option">@domo.ne.jp</li>
-										<li data-value="@doremo.ne.jp" class="option">@doremo.ne.jp</li>
-									</ul>
+
+								<div class="select">
+									<select style="display: none;">
+
+										<option value="01">@docomo.ne.jp></option>
+										<option value="02">@domo.ne.jp</option>
+										<option value="04">Potato</option>
+									</select>
+									<div class="nice-select" tabindex="0">
+										<span class="current">@docomo.ne.jp</span>
+										<ul class="list">
+											<li data-value="01" class="option">@docomo.ne.jp</li>
+											<li data-value="02" class="option">@domo.ne.jp</li>
+											<li data-value="04" class="option">@doremo.ne.jp</li>
+										</ul>
+									</div>
 								</div>
+
+
 							</div>
 
 						</div>
@@ -195,15 +204,14 @@
 						</div>
 
 						<label for="your"></label>
-						<textarea class="textarea" type="text" id="your" placeholder="例・その他お問い合わせ内容など"></textarea>
+						<textarea class="textarea"  id="your" placeholder="例・その他お問い合わせ内容など"></textarea>
 
 
 						<button class="btn submit secondary-top-offset" type="submit">送信</button>
-					</form></div>
+					</form>
+				</div>
 			</div>
-
 		</section>
-
 	</div>
 	<%= _.template(require('./parts/footer.html'))() %>
 </div>

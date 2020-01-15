@@ -20,7 +20,11 @@
 	<title>Home</title>
 	<style>
 		[data-active="01"] .header__nav-link {
-			background-color: #FF7CAD;
+				background: linear-gradient(to left, #FF7CAD 0%, #FFB6C2 calc(100% * 1));
+				pointer-events: none;
+			}
+		[data-active="01"] .header__nav-link::after {
+			content: none;
 		}
 
 		[data-active="01"] .header__nav-link-inner {
@@ -443,7 +447,6 @@
 				</div>
 			</div>
 		</section>
-	</div>
 
 	<section class="top-info">
 		<div class="top-info-flower_01 top-info-flower_02 main-inner-offset">
@@ -553,7 +556,7 @@
 			</div>
 		</div>
 	</section>
-</div>
+
 
 <section class="top-contact main-inner-offset top-contact-flower_01 top-contact-flower_02">
 	<div class="container z-index-10">
@@ -614,12 +617,14 @@
 
 
 					<div class="select">
-						<select style="display: none;">
+						<label>
+							<select style="display: none;">
 
-							<option value="01">@docomo.ne.jp></option>
-							<option value="02">@domo.ne.jp</option>
-							<option value="04">Potato</option>
-						</select>
+								<option value="01">@docomo.ne.jp></option>
+								<option value="02">@domo.ne.jp</option>
+								<option value="04">Potato</option>
+							</select>
+						</label>
 						<div class="nice-select" tabindex="0">
 							<span class="current">@docomo.ne.jp</span>
 							<ul class="list">
@@ -687,13 +692,12 @@
 			</div>
 
 			<label for="your"></label>
-			<textarea class="textarea" type="text" id="your" placeholder="例・その他お問い合わせ内容など"></textarea>
+			<textarea class="textarea" id="your" placeholder="例・その他お問い合わせ内容など"></textarea>
 
 
 			<button class="btn submit secondary-top-offset" type="submit">送信</button>
 		</form>
 	</div>
-
 </section>
 </div>
 <%= _.template(require('./parts/footer.html'))() %>

@@ -78,6 +78,7 @@
 		position: relative;
 		overflow: hidden;
 		z-index: 3;
+		background-color: $blush;
 		@at-root :root.hover &:hover {
 			.header__nav-link-inner {
 				color: $white;
@@ -108,10 +109,10 @@
 			bottom: 0;
 			width: 100%;
 			height: 100%;
-			transform: translateX(-100%);
-			background-color: $flamingo;
+			transform: translateX(calc(-100% - 1px));
+			background-image: linear-gradient(to left, $flamingo 0%, #FFB6C2 calc(100% * 1));
 			transition: transform .5s;
-			z-index: 1;
+			z-index:1;
 		}
 	}
 
@@ -163,6 +164,7 @@
 		stroke-dasharray: 40 139;
 	}
 
+
 	.ham1 .bottom {
 		stroke-dasharray: 40 180;
 	}
@@ -185,7 +187,7 @@
 		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 		stroke: #FF7CAA;
 		stroke-width: 5.5;
-		stroke-linecap: round;
+		stroke-linecap:round;
 	}
 
 }

@@ -20,7 +20,11 @@
 	<title>Home</title>
 	<style>
 		[data-active="03"] .header__nav-link {
-			background-color: #FF7CAD;
+			background: linear-gradient(to left, #FF7CAD 0%, #FFB6C2 calc(100% * 1));
+		}
+
+		[data-active="03"] .header__nav-link::after {
+			content: none;
 		}
 
 		[data-active="03"] .header__nav-link-inner {
@@ -34,10 +38,10 @@
 	<div class="app" id="app">
 
 
-			<section class="voice-flower_02 voice-flower_01 main-inner-offset voice pink-gradient">
-				<div class="container z-index-10">
-					<div class="voice__wrap">
-						<h2 class="secondary-title">
+		<section class="voice-flower_02 voice-flower_01 main-inner-offset voice pink-gradient">
+			<div class="container z-index-10">
+				<div class="voice__wrap">
+					<h2 class="secondary-title">
 								<span class="secondary-title__inner">
 							<span class="secondary-title__icon">
 								<svg width="106" height="98" viewBox="0 0 106 98" fill="none" xmlns="http://www.w3.org/2000/svg"><path
@@ -53,7 +57,7 @@
 
 						</span>
 								</span>
-							<span class="after">
+						<span class="after">
 									<svg width="120" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path
 										d="M55.45 9.42c-2.886-1.343-7.047-.671-8.879 2.128-2.053 3.191 1.443 9.126 4.606 5.15.333-.447.666-.951.721-1.51.056-.56-.222-1.177-.721-1.345-.5-.168-.999.112-1.443.336-.444.224-1.054.336-1.443 0-.221-.224-.277-.56-.277-.895.111-1.064 1.054-1.848 2.053-2.128.999-.28 2.053-.056 3.108.168.555.168 1.165.28 1.664.616 1.499.896 2.497 3.191 2.664 4.87.388 3.304-1.443 6.887-3.829 9.014-2.663 2.408-6.16 2.352-9.1.616-.944-.56-3.44-2.463-3.663-3.695-.222-1.456.278-3.639 1.887-3.191.888.28 1.665-.616 1.443-1.456-.722-2.855-4.44-2.575-5.938-.392-.998 1.4-.998 3.024-.499 4.591-1.276-1.175-2.497-2.127-4.44-2.631-3.107-.84-7.49-.168-8.545 3.247-.166.672.444 1.176 1.055 1.064 2.275-.504 3.884-1.792 6.326-1.568 3.162.28 4.66 2.632 7.047 4.311 1.664 1.12 3.718 2.184 5.77 2.52 6.493 1.903 13.54-3.36 14.65-10.582.5-3.47-.832-7.67-4.217-9.237z"
 										fill="#FF7CAD"/><path
@@ -61,7 +65,7 @@
 										fill="#FF7CAD"/><path
 										d="M115.49 23.529c-4.828-1.624-9.101 5.99-4.495 8.957 1.665 1.064 3.829 1.008 4.939-.728.666-1.063.721-4.142-1.277-3.863-.499.056-.887.392-1.109.84-.056.168-.111.336-.278.392-.055 0-.166 0-.222-.056-.666-.28-.777-1.232-.388-1.792.388-.56 1.11-.84 1.776-1.007 4.716-.84 4.55 6.158 1.997 8.398-2.441 2.127-6.326 2.015-9.045.447-2.663-1.567-4.383-3.862-6.381-6.102-1.887-2.127-3.94-4.087-6.548-4.367-.055 0-.11-.056-.166-.056-7.824-3.415-14.76 6.047-22.363 6.215-.277 0-.333.392-.055.504 1.443.56 2.83.615 4.162.391 3.55.336 6.88-2.183 10.432-1.455.277.056.444-.336.166-.448-1.498-.896-3.163-.672-4.828-.28.722-.392 1.443-.84 2.22-1.176 2.386-1.343 5.55-2.967 8.324-2.407.887.168 1.72.56 2.33 1.176.61.671.888 1.623.666 2.463-.277.84-1.165 1.512-1.998 1.344-.444-.056-.832-.336-1.22-.56-.389-.224-.833-.448-1.277-.448-.999 0-1.276 1.12-1.22 1.903.166 3.64 5.327 4.255 7.435 2.072 1.498-1.624 1.61-3.695.888-5.543 5.272 4.647 9.045 12.765 17.313 9.126 5.493-2.575 6.992-11.59.222-13.94zm-45.668 6.214c-1.388 0-1.388 2.183 0 2.183 1.387 0 1.387-2.183 0-2.183zm-2.719-.448c-.888 0-.888 1.4 0 1.4.943 0 .943-1.4 0-1.4zm-1.998-1.511c-.888 0-.888 1.4 0 1.4.943 0 .943-1.4 0-1.4zm-1.609-1.288c-.888 0-.888 1.4 0 1.4.943 0 .943-1.4 0-1.4zm.666 3.134c-.833-.727-1.72-1.343-2.386-2.183-.389-.504-.666-1.064-.888-1.623-.167-.504-.278-1.008-.555-1.456-.111-.168-.222-.224-.277-.28-.056 0-.167.112-.278.28-.277.448-.333 1.008-.555 1.456-.222.56-.5 1.12-.888 1.623-.666.84-1.553 1.456-2.386 2.184-.388.335-.832.84-.777 1.4.056.671.777 1.119 1.443 1.063.666 0 1.276-.392 1.831-.728 0 .896-.055 1.792.167 2.687.11.392.277.84.555 1.12.222.224.555.336.832.28.278.056.61-.056.832-.28.278-.28.444-.728.555-1.12.222-.84.222-1.791.167-2.687.555.336 1.165.728 1.83.728.667 0 1.388-.392 1.444-1.064.11-.56-.278-1.064-.666-1.4zM55.95 5.837c.832.728 1.72 1.343 2.385 2.183.389.504.666 1.064.888 1.624.167.504.278 1.008.555 1.456.111.167.222.223.278.28.055 0 .166-.113.277-.28.277-.448.333-1.008.555-1.456.222-.56.5-1.12.888-1.624.666-.84 1.553-1.455 2.386-2.183.388-.336.832-.84.777-1.4-.056-.672-.777-1.12-1.443-1.064-.666 0-1.276.392-1.831.728 0-.895.055-1.791-.167-2.687-.11-.392-.277-.84-.555-1.12-.222-.224-.554-.336-.832-.28-.277-.056-.61.056-.832.28-.278.28-.444.728-.555 1.12-.222.84-.222 1.792-.167 2.687-.555-.336-1.165-.728-1.83-.728-.667 0-1.388.392-1.444 1.064-.166.56.278 1.008.666 1.4zM17.661 38.924c8.102.448 16.259.504 24.416.56 5.826.056 12.041.672 17.979.448 5.992.28 12.152-.392 17.978-.448 8.157-.056 16.259-.168 24.416-.56.444 0 .444-.783 0-.84-8.102-.447-16.259-.503-24.416-.56-5.826-.055-12.041-.671-17.979-.391-5.992-.28-12.152.392-17.978.392-8.157.056-16.259.168-24.416.56-.444.056-.444.783 0 .84z"
 										fill="#FF7CAD"/></svg></span>
-							<span class="before">
+						<span class="before">
 						<svg width="120" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path
 							d="M55.45 9.42c-2.886-1.343-7.047-.671-8.879 2.128-2.053 3.191 1.443 9.126 4.606 5.15.333-.447.666-.951.721-1.51.056-.56-.222-1.177-.721-1.345-.5-.168-.999.112-1.443.336-.444.224-1.054.336-1.443 0-.221-.224-.277-.56-.277-.895.111-1.064 1.054-1.848 2.053-2.128.999-.28 2.053-.056 3.108.168.555.168 1.165.28 1.664.616 1.499.896 2.497 3.191 2.664 4.87.388 3.304-1.443 6.887-3.829 9.014-2.663 2.408-6.16 2.352-9.1.616-.944-.56-3.44-2.463-3.663-3.695-.222-1.456.278-3.639 1.887-3.191.888.28 1.665-.616 1.443-1.456-.722-2.855-4.44-2.575-5.938-.392-.998 1.4-.998 3.024-.499 4.591-1.276-1.175-2.497-2.127-4.44-2.631-3.107-.84-7.49-.168-8.545 3.247-.166.672.444 1.176 1.055 1.064 2.275-.504 3.884-1.792 6.326-1.568 3.162.28 4.66 2.632 7.047 4.311 1.664 1.12 3.718 2.184 5.77 2.52 6.493 1.903 13.54-3.36 14.65-10.582.5-3.47-.832-7.67-4.217-9.237z"
 							fill="#FF7CAD"/><path
@@ -70,200 +74,200 @@
 							d="M115.49 23.529c-4.828-1.624-9.101 5.99-4.495 8.957 1.665 1.064 3.829 1.008 4.939-.728.666-1.063.721-4.142-1.277-3.863-.499.056-.887.392-1.109.84-.056.168-.111.336-.278.392-.055 0-.166 0-.222-.056-.666-.28-.777-1.232-.388-1.792.388-.56 1.11-.84 1.776-1.007 4.716-.84 4.55 6.158 1.997 8.398-2.441 2.127-6.326 2.015-9.045.447-2.663-1.567-4.383-3.862-6.381-6.102-1.887-2.127-3.94-4.087-6.548-4.367-.055 0-.11-.056-.166-.056-7.824-3.415-14.76 6.047-22.363 6.215-.277 0-.333.392-.055.504 1.443.56 2.83.615 4.162.391 3.55.336 6.88-2.183 10.432-1.455.277.056.444-.336.166-.448-1.498-.896-3.163-.672-4.828-.28.722-.392 1.443-.84 2.22-1.176 2.386-1.343 5.55-2.967 8.324-2.407.887.168 1.72.56 2.33 1.176.61.671.888 1.623.666 2.463-.277.84-1.165 1.512-1.998 1.344-.444-.056-.832-.336-1.22-.56-.389-.224-.833-.448-1.277-.448-.999 0-1.276 1.12-1.22 1.903.166 3.64 5.327 4.255 7.435 2.072 1.498-1.624 1.61-3.695.888-5.543 5.272 4.647 9.045 12.765 17.313 9.126 5.493-2.575 6.992-11.59.222-13.94zm-45.668 6.214c-1.388 0-1.388 2.183 0 2.183 1.387 0 1.387-2.183 0-2.183zm-2.719-.448c-.888 0-.888 1.4 0 1.4.943 0 .943-1.4 0-1.4zm-1.998-1.511c-.888 0-.888 1.4 0 1.4.943 0 .943-1.4 0-1.4zm-1.609-1.288c-.888 0-.888 1.4 0 1.4.943 0 .943-1.4 0-1.4zm.666 3.134c-.833-.727-1.72-1.343-2.386-2.183-.389-.504-.666-1.064-.888-1.623-.167-.504-.278-1.008-.555-1.456-.111-.168-.222-.224-.277-.28-.056 0-.167.112-.278.28-.277.448-.333 1.008-.555 1.456-.222.56-.5 1.12-.888 1.623-.666.84-1.553 1.456-2.386 2.184-.388.335-.832.84-.777 1.4.056.671.777 1.119 1.443 1.063.666 0 1.276-.392 1.831-.728 0 .896-.055 1.792.167 2.687.11.392.277.84.555 1.12.222.224.555.336.832.28.278.056.61-.056.832-.28.278-.28.444-.728.555-1.12.222-.84.222-1.791.167-2.687.555.336 1.165.728 1.83.728.667 0 1.388-.392 1.444-1.064.11-.56-.278-1.064-.666-1.4zM55.95 5.837c.832.728 1.72 1.343 2.385 2.183.389.504.666 1.064.888 1.624.167.504.278 1.008.555 1.456.111.167.222.223.278.28.055 0 .166-.113.277-.28.277-.448.333-1.008.555-1.456.222-.56.5-1.12.888-1.624.666-.84 1.553-1.455 2.386-2.183.388-.336.832-.84.777-1.4-.056-.672-.777-1.12-1.443-1.064-.666 0-1.276.392-1.831.728 0-.895.055-1.791-.167-2.687-.11-.392-.277-.84-.555-1.12-.222-.224-.554-.336-.832-.28-.277-.056-.61.056-.832.28-.278.28-.444.728-.555 1.12-.222.84-.222 1.792-.167 2.687-.555-.336-1.165-.728-1.83-.728-.667 0-1.388.392-1.444 1.064-.166.56.278 1.008.666 1.4zM17.661 38.924c8.102.448 16.259.504 24.416.56 5.826.056 12.041.672 17.979.448 5.992.28 12.152-.392 17.978-.448 8.157-.056 16.259-.168 24.416-.56.444 0 .444-.783 0-.84-8.102-.447-16.259-.503-24.416-.56-5.826-.055-12.041-.671-17.979-.391-5.992-.28-12.152.392-17.978.392-8.157.056-16.259.168-24.416.56-.444.056-.444.783 0 .84z"
 							fill="#FF7CAD"/></svg>
 					</span>
-						</h2>
-						<span class="voice__image">
+					</h2>
+					<span class="voice__image">
 					<img src="/images/voice_image.png" alt="description">
 				</span>
-					</div>
-					<div class="experience_voice">
-						<ul class="experience__list primary-top-offset">
-
-							<li class="experience__item">
-
-								<div class="experience__image-wrap">
-									<div class="experience__image-inner">
-										<div class="experience__image">
-											<img src="/images/work_img_01.jpg" alt="image description">
-										</div>
-									</div>
-									<div class="experience__image-text-wrap">
-										<h3 class="experience__image-title text-center">ナオさん/26歳</h3>
-										<p class="experience__image-text">ネイルサロンを出すのが夢で<br>
-											資金を貯めています。</p>
-									</div>
-								</div>
-
-								<div class="experience__desc-wrap">
-
-									<div class="experience__desc-header">
-										<p class="experience__desc-header-salary ">お給料CASE.1</p>
-										<p class="experience__desc-header-text">とにかくがっつり稼ぎたい！</p>
-									</div>
-
-									<div class="experience__desc-calendar">
-								<span class="experience__desc-calendar-icon">
-									<svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M49.977 15.337V7.29h-6.539V2.774h-6.023v4.517h-9.82a14.623 14.623 0 00-5.596-5.438A14.814 14.814 0 0010.988.505c-.63.18-1.012.831-.854 1.46.18.63.831 1.012 1.46.832a12.437 12.437 0 019.259 1.123 12.336 12.336 0 015.933 7.439c.921 3.191.54 6.562-1.056 9.46a12.275 12.275 0 01-1.64 2.316 12.434 12.434 0 01-5.799 3.618c-3.191.921-6.562.539-9.46-1.056a12.337 12.337 0 01-5.934-7.439 12.35 12.35 0 01.877-9.079l1.326.989c.36.27.651.112.606-.337L5.46 5.763c-.022-.45-.404-.741-.854-.629L.65 6.1c-.45.113-.494.427-.135.697l1.281.944C-.069 11.179-.496 15.157.583 18.932c1.011 3.483 3.19 6.382 6.202 8.338v23.214H50V18.348H29.258c.247-.989.382-2 .427-3.011h20.293zM39.416 4.774h2v6.023h-2V4.774zM20.831 43.45h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.034 7.034h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.033 7.034h-6.022v-6.023h6.022v6.023zm0-7.034h-6.022v-6.023h6.022v6.023zm1.012-13.057h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm-1.012-8.045h-6.022v-6.023h6.022v6.023z"
-											fill="#F40F7D"/>
-										<path
-											d="M14.043 5.516a.96.96 0 00-.966.966v9.619l8.81 4.54c.134.067.292.112.449.112.36 0 .697-.18.854-.517a.965.965 0 00-.405-1.304l-7.753-4v-8.45c-.022-.516-.45-.966-.989-.966z"
-											fill="#FF0074"/>
-									</svg>
-								</span>
-										<span class="experience__desc-calendar-work">
-								出勤<br>日数
-							</span>
-										<p class="experience__desc-calendar-text">
-											<span class="experience__desc-calendar-number">6</span>
-											日/週　X　勤務時間
-											<span class="experience__desc-calendar-number">9</span>
-											時間 / １日
-										</p>
-									</div>
-									<p class="experience__desc-calendar-jobs">※お仕事本数　５〜６本</p>
-
-									<div class="experience__desc-price">
-										<p class="experience__desc-price-text">１日の平均お給料</p>
-										<p class="experience__desc-price-sum">108,000<span class="experience__desc-price-currency">円</span>
-										</p>
-									</div>
-
-									<div class="experience__desc-bottom">
-										<p class="experience__desc-bottom-text">一ヶ月のお給料</p>
-										<p class="experience__desc-bottom-sum">2,260,000<span
-											class="experience__desc-bottom-currency">円</span>
-										</p>
-									</div>
-								</div>
-
-							</li>
-							<li class="experience__item">
-
-								<div class="experience__image-wrap">
-									<div class="experience__image-inner">
-										<div class="experience__image">
-											<img src="/images/work_img_02.jpg" alt="image description">
-										</div>
-									</div>
-									<div class="experience__image-text-wrap">
-										<h3 class="experience__image-title text-center">リンさん/20歳</h3>
-										<p class="experience__image-text">海外旅行の資金も貯められて<br>
-											プラス貯金もしています♪</p>
-									</div>
-								</div>
-
-								<div class="experience__desc-wrap">
-
-									<div class="experience__desc-header">
-										<p class="experience__desc-header-salary ">お給料CASE.2</p>
-										<p class="experience__desc-header-text">空いた時間に稼ぎたい♪</p>
-									</div>
-
-									<div class="experience__desc-calendar">
-								<span class="experience__desc-calendar-icon">
-									<svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M49.977 15.337V7.29h-6.539V2.774h-6.023v4.517h-9.82a14.623 14.623 0 00-5.596-5.438A14.814 14.814 0 0010.988.505c-.63.18-1.012.831-.854 1.46.18.63.831 1.012 1.46.832a12.437 12.437 0 019.259 1.123 12.336 12.336 0 015.933 7.439c.921 3.191.54 6.562-1.056 9.46a12.275 12.275 0 01-1.64 2.316 12.434 12.434 0 01-5.799 3.618c-3.191.921-6.562.539-9.46-1.056a12.337 12.337 0 01-5.934-7.439 12.35 12.35 0 01.877-9.079l1.326.989c.36.27.651.112.606-.337L5.46 5.763c-.022-.45-.404-.741-.854-.629L.65 6.1c-.45.113-.494.427-.135.697l1.281.944C-.069 11.179-.496 15.157.583 18.932c1.011 3.483 3.19 6.382 6.202 8.338v23.214H50V18.348H29.258c.247-.989.382-2 .427-3.011h20.293zM39.416 4.774h2v6.023h-2V4.774zM20.831 43.45h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.034 7.034h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.033 7.034h-6.022v-6.023h6.022v6.023zm0-7.034h-6.022v-6.023h6.022v6.023zm1.012-13.057h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm-1.012-8.045h-6.022v-6.023h6.022v6.023z"
-											fill="#F40F7D"/>
-										<path
-											d="M14.043 5.516a.96.96 0 00-.966.966v9.619l8.81 4.54c.134.067.292.112.449.112.36 0 .697-.18.854-.517a.965.965 0 00-.405-1.304l-7.753-4v-8.45c-.022-.516-.45-.966-.989-.966z"
-											fill="#FF0074"/>
-									</svg>
-								</span>
-										<span class="experience__desc-calendar-work">
-								出勤<br>日数
-							</span>
-										<p class="experience__desc-calendar-text">
-											<span class="experience__desc-calendar-number">3</span>
-											日/週　X　勤務時間
-											<span class="experience__desc-calendar-number">6</span>
-											時間 / １日
-										</p>
-									</div>
-									<p class="experience__desc-calendar-jobs">※お仕事本数　３〜４本</p>
-
-									<div class="experience__desc-price">
-										<p class="experience__desc-price-text">１日の平均お給料</p>
-										<p class="experience__desc-price-sum">78,000<span class="experience__desc-price-currency">円</span>
-										</p>
-									</div>
-
-									<div class="experience__desc-bottom">
-										<p class="experience__desc-bottom-text">一ヶ月のお給料</p>
-										<p class="experience__desc-bottom-sum">930,000<span
-											class="experience__desc-bottom-currency">円</span>
-										</p>
-									</div>
-								</div>
-
-							</li>
-							<li class="experience__item">
-
-								<div class="experience__image-wrap">
-									<div class="experience__image-inner">
-										<div class="experience__image">
-											<img src="/images/work_img_03.jpg" alt="image description">
-										</div>
-									</div>
-									<div class="experience__image-text-wrap">
-										<h3 class="experience__image-title text-center">ユウキさん/20歳</h3>
-										<p class="experience__image-text">昼間仕事しているので、
-											<br>
-											副業感覚でお小遣い稼ぎ！</p>
-									</div>
-								</div>
-
-								<div class="experience__desc-wrap">
-
-									<div class="experience__desc-header">
-										<p class="experience__desc-header-salary ">お給料CASE.3</p>
-										<p class="experience__desc-header-text">無理なく週末だけ♪</p>
-									</div>
-
-									<div class="experience__desc-calendar">
-								<span class="experience__desc-calendar-icon">
-									<svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M49.977 15.337V7.29h-6.539V2.774h-6.023v4.517h-9.82a14.623 14.623 0 00-5.596-5.438A14.814 14.814 0 0010.988.505c-.63.18-1.012.831-.854 1.46.18.63.831 1.012 1.46.832a12.437 12.437 0 019.259 1.123 12.336 12.336 0 015.933 7.439c.921 3.191.54 6.562-1.056 9.46a12.275 12.275 0 01-1.64 2.316 12.434 12.434 0 01-5.799 3.618c-3.191.921-6.562.539-9.46-1.056a12.337 12.337 0 01-5.934-7.439 12.35 12.35 0 01.877-9.079l1.326.989c.36.27.651.112.606-.337L5.46 5.763c-.022-.45-.404-.741-.854-.629L.65 6.1c-.45.113-.494.427-.135.697l1.281.944C-.069 11.179-.496 15.157.583 18.932c1.011 3.483 3.19 6.382 6.202 8.338v23.214H50V18.348H29.258c.247-.989.382-2 .427-3.011h20.293zM39.416 4.774h2v6.023h-2V4.774zM20.831 43.45h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.034 7.034h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.033 7.034h-6.022v-6.023h6.022v6.023zm0-7.034h-6.022v-6.023h6.022v6.023zm1.012-13.057h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm-1.012-8.045h-6.022v-6.023h6.022v6.023z"
-											fill="#F40F7D"/>
-										<path
-											d="M14.043 5.516a.96.96 0 00-.966.966v9.619l8.81 4.54c.134.067.292.112.449.112.36 0 .697-.18.854-.517a.965.965 0 00-.405-1.304l-7.753-4v-8.45c-.022-.516-.45-.966-.989-.966z"
-											fill="#FF0074"/>
-									</svg>
-								</span>
-										<span class="experience__desc-calendar-work">
-								出勤<br>日数
-							</span>
-										<p class="experience__desc-calendar-text">
-											<span class="experience__desc-calendar-number">2</span>
-											日/週　X　勤務時間
-											<span class="experience__desc-calendar-number">7</span>
-											時間 / １日
-										</p>
-									</div>
-									<p class="experience__desc-calendar-jobs">※お仕事本数　４〜５本</p>
-
-									<div class="experience__desc-price">
-										<p class="experience__desc-price-text">１日の平均お給料</p>
-										<p class="experience__desc-price-sum">72,000<span class="experience__desc-price-currency">円</span>
-										</p>
-									</div>
-
-									<div class="experience__desc-bottom">
-										<p class="experience__desc-bottom-text">一ヶ月のお給料</p>
-										<p class="experience__desc-bottom-sum">560,000<span
-											class="experience__desc-bottom-currency">円</span>
-										</p>
-									</div>
-								</div>
-
-							</li>
-
-						</ul>
-					</div>
 				</div>
-			</section>
+				<div class="experience_voice">
+					<ul class="experience__list primary-top-offset">
+
+						<li class="experience__item">
+
+							<div class="experience__image-wrap">
+								<div class="experience__image-inner">
+									<div class="experience__image">
+										<img src="/images/work_img_01.jpg" alt="image description">
+									</div>
+								</div>
+								<div class="experience__image-text-wrap">
+									<h3 class="experience__image-title text-center">ナオさん/26歳</h3>
+									<p class="experience__image-text">ネイルサロンを出すのが夢で<br>
+										資金を貯めています。</p>
+								</div>
+							</div>
+
+							<div class="experience__desc-wrap">
+
+								<div class="experience__desc-header">
+									<p class="experience__desc-header-salary ">お給料CASE.1</p>
+									<p class="experience__desc-header-text">とにかくがっつり稼ぎたい！</p>
+								</div>
+
+								<div class="experience__desc-calendar">
+								<span class="experience__desc-calendar-icon">
+									<svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M49.977 15.337V7.29h-6.539V2.774h-6.023v4.517h-9.82a14.623 14.623 0 00-5.596-5.438A14.814 14.814 0 0010.988.505c-.63.18-1.012.831-.854 1.46.18.63.831 1.012 1.46.832a12.437 12.437 0 019.259 1.123 12.336 12.336 0 015.933 7.439c.921 3.191.54 6.562-1.056 9.46a12.275 12.275 0 01-1.64 2.316 12.434 12.434 0 01-5.799 3.618c-3.191.921-6.562.539-9.46-1.056a12.337 12.337 0 01-5.934-7.439 12.35 12.35 0 01.877-9.079l1.326.989c.36.27.651.112.606-.337L5.46 5.763c-.022-.45-.404-.741-.854-.629L.65 6.1c-.45.113-.494.427-.135.697l1.281.944C-.069 11.179-.496 15.157.583 18.932c1.011 3.483 3.19 6.382 6.202 8.338v23.214H50V18.348H29.258c.247-.989.382-2 .427-3.011h20.293zM39.416 4.774h2v6.023h-2V4.774zM20.831 43.45h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.034 7.034h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.033 7.034h-6.022v-6.023h6.022v6.023zm0-7.034h-6.022v-6.023h6.022v6.023zm1.012-13.057h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm-1.012-8.045h-6.022v-6.023h6.022v6.023z"
+											fill="#F40F7D"/>
+										<path
+											d="M14.043 5.516a.96.96 0 00-.966.966v9.619l8.81 4.54c.134.067.292.112.449.112.36 0 .697-.18.854-.517a.965.965 0 00-.405-1.304l-7.753-4v-8.45c-.022-.516-.45-.966-.989-.966z"
+											fill="#FF0074"/>
+									</svg>
+								</span>
+									<span class="experience__desc-calendar-work">
+								出勤<br>日数
+							</span>
+									<p class="experience__desc-calendar-text">
+										<span class="experience__desc-calendar-number">6</span>
+										日/週　X　勤務時間
+										<span class="experience__desc-calendar-number">9</span>
+										時間 / １日
+									</p>
+								</div>
+								<p class="experience__desc-calendar-jobs">※お仕事本数　５〜６本</p>
+
+								<div class="experience__desc-price">
+									<p class="experience__desc-price-text">１日の平均お給料</p>
+									<p class="experience__desc-price-sum">108,000<span class="experience__desc-price-currency">円</span>
+									</p>
+								</div>
+
+								<div class="experience__desc-bottom">
+									<p class="experience__desc-bottom-text">一ヶ月のお給料</p>
+									<p class="experience__desc-bottom-sum">2,260,000<span
+										class="experience__desc-bottom-currency">円</span>
+									</p>
+								</div>
+							</div>
+
+						</li>
+						<li class="experience__item">
+
+							<div class="experience__image-wrap">
+								<div class="experience__image-inner">
+									<div class="experience__image">
+										<img src="/images/work_img_02.jpg" alt="image description">
+									</div>
+								</div>
+								<div class="experience__image-text-wrap">
+									<h3 class="experience__image-title text-center">リンさん/20歳</h3>
+									<p class="experience__image-text">海外旅行の資金も貯められて<br>
+										プラス貯金もしています♪</p>
+								</div>
+							</div>
+
+							<div class="experience__desc-wrap">
+
+								<div class="experience__desc-header">
+									<p class="experience__desc-header-salary ">お給料CASE.2</p>
+									<p class="experience__desc-header-text">空いた時間に稼ぎたい♪</p>
+								</div>
+
+								<div class="experience__desc-calendar">
+								<span class="experience__desc-calendar-icon">
+									<svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M49.977 15.337V7.29h-6.539V2.774h-6.023v4.517h-9.82a14.623 14.623 0 00-5.596-5.438A14.814 14.814 0 0010.988.505c-.63.18-1.012.831-.854 1.46.18.63.831 1.012 1.46.832a12.437 12.437 0 019.259 1.123 12.336 12.336 0 015.933 7.439c.921 3.191.54 6.562-1.056 9.46a12.275 12.275 0 01-1.64 2.316 12.434 12.434 0 01-5.799 3.618c-3.191.921-6.562.539-9.46-1.056a12.337 12.337 0 01-5.934-7.439 12.35 12.35 0 01.877-9.079l1.326.989c.36.27.651.112.606-.337L5.46 5.763c-.022-.45-.404-.741-.854-.629L.65 6.1c-.45.113-.494.427-.135.697l1.281.944C-.069 11.179-.496 15.157.583 18.932c1.011 3.483 3.19 6.382 6.202 8.338v23.214H50V18.348H29.258c.247-.989.382-2 .427-3.011h20.293zM39.416 4.774h2v6.023h-2V4.774zM20.831 43.45h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.034 7.034h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.033 7.034h-6.022v-6.023h6.022v6.023zm0-7.034h-6.022v-6.023h6.022v6.023zm1.012-13.057h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm-1.012-8.045h-6.022v-6.023h6.022v6.023z"
+											fill="#F40F7D"/>
+										<path
+											d="M14.043 5.516a.96.96 0 00-.966.966v9.619l8.81 4.54c.134.067.292.112.449.112.36 0 .697-.18.854-.517a.965.965 0 00-.405-1.304l-7.753-4v-8.45c-.022-.516-.45-.966-.989-.966z"
+											fill="#FF0074"/>
+									</svg>
+								</span>
+									<span class="experience__desc-calendar-work">
+								出勤<br>日数
+							</span>
+									<p class="experience__desc-calendar-text">
+										<span class="experience__desc-calendar-number">3</span>
+										日/週　X　勤務時間
+										<span class="experience__desc-calendar-number">6</span>
+										時間 / １日
+									</p>
+								</div>
+								<p class="experience__desc-calendar-jobs">※お仕事本数　３〜４本</p>
+
+								<div class="experience__desc-price">
+									<p class="experience__desc-price-text">１日の平均お給料</p>
+									<p class="experience__desc-price-sum">78,000<span class="experience__desc-price-currency">円</span>
+									</p>
+								</div>
+
+								<div class="experience__desc-bottom">
+									<p class="experience__desc-bottom-text">一ヶ月のお給料</p>
+									<p class="experience__desc-bottom-sum">930,000<span
+										class="experience__desc-bottom-currency">円</span>
+									</p>
+								</div>
+							</div>
+
+						</li>
+						<li class="experience__item">
+
+							<div class="experience__image-wrap">
+								<div class="experience__image-inner">
+									<div class="experience__image">
+										<img src="/images/work_img_03.jpg" alt="image description">
+									</div>
+								</div>
+								<div class="experience__image-text-wrap">
+									<h3 class="experience__image-title text-center">ユウキさん/20歳</h3>
+									<p class="experience__image-text">昼間仕事しているので、
+										<br>
+										副業感覚でお小遣い稼ぎ！</p>
+								</div>
+							</div>
+
+							<div class="experience__desc-wrap">
+
+								<div class="experience__desc-header">
+									<p class="experience__desc-header-salary ">お給料CASE.3</p>
+									<p class="experience__desc-header-text">無理なく週末だけ♪</p>
+								</div>
+
+								<div class="experience__desc-calendar">
+								<span class="experience__desc-calendar-icon">
+									<svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M49.977 15.337V7.29h-6.539V2.774h-6.023v4.517h-9.82a14.623 14.623 0 00-5.596-5.438A14.814 14.814 0 0010.988.505c-.63.18-1.012.831-.854 1.46.18.63.831 1.012 1.46.832a12.437 12.437 0 019.259 1.123 12.336 12.336 0 015.933 7.439c.921 3.191.54 6.562-1.056 9.46a12.275 12.275 0 01-1.64 2.316 12.434 12.434 0 01-5.799 3.618c-3.191.921-6.562.539-9.46-1.056a12.337 12.337 0 01-5.934-7.439 12.35 12.35 0 01.877-9.079l1.326.989c.36.27.651.112.606-.337L5.46 5.763c-.022-.45-.404-.741-.854-.629L.65 6.1c-.45.113-.494.427-.135.697l1.281.944C-.069 11.179-.496 15.157.583 18.932c1.011 3.483 3.19 6.382 6.202 8.338v23.214H50V18.348H29.258c.247-.989.382-2 .427-3.011h20.293zM39.416 4.774h2v6.023h-2V4.774zM20.831 43.45h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.034 7.034h-6.023v-6.023h6.023v6.023zm0-7.034h-6.023v-6.023h6.023v6.023zm7.033 7.034h-6.022v-6.023h6.022v6.023zm0-7.034h-6.022v-6.023h6.022v6.023zm1.012-13.057h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm0 7.034h6.022v6.023H35.91v-6.023zm-1.012-8.045h-6.022v-6.023h6.022v6.023z"
+											fill="#F40F7D"/>
+										<path
+											d="M14.043 5.516a.96.96 0 00-.966.966v9.619l8.81 4.54c.134.067.292.112.449.112.36 0 .697-.18.854-.517a.965.965 0 00-.405-1.304l-7.753-4v-8.45c-.022-.516-.45-.966-.989-.966z"
+											fill="#FF0074"/>
+									</svg>
+								</span>
+									<span class="experience__desc-calendar-work">
+								出勤<br>日数
+							</span>
+									<p class="experience__desc-calendar-text">
+										<span class="experience__desc-calendar-number">2</span>
+										日/週　X　勤務時間
+										<span class="experience__desc-calendar-number">7</span>
+										時間 / １日
+									</p>
+								</div>
+								<p class="experience__desc-calendar-jobs">※お仕事本数　４〜５本</p>
+
+								<div class="experience__desc-price">
+									<p class="experience__desc-price-text">１日の平均お給料</p>
+									<p class="experience__desc-price-sum">72,000<span class="experience__desc-price-currency">円</span>
+									</p>
+								</div>
+
+								<div class="experience__desc-bottom">
+									<p class="experience__desc-bottom-text">一ヶ月のお給料</p>
+									<p class="experience__desc-bottom-sum">560,000<span
+										class="experience__desc-bottom-currency">円</span>
+									</p>
+								</div>
+							</div>
+
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</section>
 
 
 	</div>

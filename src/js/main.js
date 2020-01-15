@@ -1,9 +1,8 @@
 import smoothscroll from 'smoothscroll-polyfill';
+
 smoothscroll.polyfill();
 import AOS from 'aos';
 import $ from 'jquery';
-
-
 
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock/lib/bodyScrollLock.es6';
 
@@ -13,24 +12,19 @@ window.jQuery = $;
 
 require('jquery-nice-select/js/jquery.nice-select.min');
 
-
-
-
 $(document).ready(function () {
 	$('select').niceSelect();
 });
 
-function accordion() {
+(function () {
 	$('#accordion .accordion__wrap.answer').hide();
 	$('#accordion .accordion__item:first-child .accordion__wrap.answer').show();
-
 
 	$('#accordion .accordion__wrap.question').click(function () {
 		$(this).next().slideToggle();
 		$('#accordion .accordion__wrap.question').not(this).next().slideUp();
 	});
-}
-
+}());
 
 function mobileMenu() {
 	let header = document.getElementById('header');
@@ -86,10 +80,10 @@ function scrollToTop() {
 	window.addEventListener('scroll', function () {
 		if (window.pageYOffset > 200) {
 			scrollToTopBtn.classList.add('visible');
-		} else  {
+		} else {
 			scrollToTopBtn.classList.remove('visible')
 		}
-		if ((footer.getBoundingClientRect().top - window.innerHeight)  >= 0) {
+		if ((footer.getBoundingClientRect().top - window.innerHeight) >= 0) {
 			scrollToTopBtn.classList.remove('absolute');
 		} else {
 			scrollToTopBtn.classList.add('absolute');
@@ -101,7 +95,6 @@ function scrollToTop() {
 
 mobileMenu();
 scrollToTop();
-accordion();
 AOS.init();
 
 AOS.init({

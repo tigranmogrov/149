@@ -1,7 +1,8 @@
 .voice {
-@include media('<md'){
-	margin-top: 70px;
-}
+	@include media('<md') {
+		margin-top: 70px;
+	}
+
 	&__wrap {
 		position: relative;
 	}
@@ -24,5 +25,5 @@
 		}
 	}
 
-
 }
+

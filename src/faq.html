@@ -20,7 +20,11 @@
 	<title>Home</title>
 	<style>
 		[data-active="04"] .header__nav-link {
-			background-color: #FF7CAD;
+			background: linear-gradient(to left, #FF7CAD 0%, #FFB6C2 calc(100% * 1));
+		}
+
+		[data-active="04"] .header__nav-link::after {
+			content: none;
 		}
 
 		[data-active="04"] .header__nav-link-inner {
@@ -33,7 +37,7 @@
 	<%= _.template(require('./parts/header.html'))() %>
 	<div class="app" id="app">
 
-		<div class="faq">
+
 
 			<section class="faq faq-flower_01 faq-flower_02">
 				<div class="top-faq main-inner-offset  top-pink-gradient">
@@ -234,14 +238,14 @@
 							</div>
 
 						</div>
+
 					</div>
 				</div>
 			</section>
 
-
 	</div>
-	<%= _.template(require('./parts/footer.html'))() %>
-</div>
+			<%= _.template(require('./parts/footer.html'))() %>
+		</div>
 </body>
 </html>
 
